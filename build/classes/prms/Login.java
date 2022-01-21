@@ -19,9 +19,9 @@ import javax.swing.SwingConstants;
 
 public class Login extends javax.swing.JFrame {
     
-    static String LogoLoc = "C:\\Users\\Brion\\Documents\\NetBeansProjects\\PRMS\\src\\prms\\wallpapers\\Brion Technological Systems3.png";
-    static String CarbonLoc = "C:\\Users\\Brion\\Documents\\NetBeansProjects\\PRMS\\src\\prms\\wallpapers\\CVO9Y72-black-carbon-wallpaper.jpg";
-    static String iconLoc = "C:\\Users\\Brion\\Documents\\NetBeansProjects\\PRMS\\src\\prms\\icons\\icons8_user_130px_1.png";
+    static String LogoLoc = "res/Brion Technological Systems3.png";
+    static String CarbonLoc = "res/CVO9Y72-black-carbon-wallpaper.jpg";
+    static String iconLoc = "res/icons8_user_130px_1.png";
     
     public Login() {
         initComponents();
@@ -137,7 +137,7 @@ public class Login extends javax.swing.JFrame {
 
         viewPicture.setBackground(new java.awt.Color(255, 255, 255));
         viewPicture.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        viewPicture.setIcon(new javax.swing.ImageIcon(getClass().getResource("/prms/icons/icons8_user_130px_1.png"))); // NOI18N
+        viewPicture.setIcon(new javax.swing.ImageIcon(getClass().getResource("/res/icons8_user_130px_1.png"))); // NOI18N
         viewPicture.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
         viewPicture.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         viewPicture.setOpaque(true);
@@ -267,7 +267,7 @@ public class Login extends javax.swing.JFrame {
 
         BTSBillboardLogo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         BTSBillboardLogo.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        LoginPanel.add(BTSBillboardLogo, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 40, 370, 370));
+        LoginPanel.add(BTSBillboardLogo, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 40, 370, 370));
 
         BTSTitleMainText.setFont(new java.awt.Font("Iron Shark", 0, 18)); // NOI18N
         BTSTitleMainText.setForeground(new java.awt.Color(255, 208, 0));
@@ -637,6 +637,7 @@ public class Login extends javax.swing.JFrame {
                                 
                                 bravo.setVisible(true);
                             }else{
+                                
                             }   
                         }else{
                             System.out.println("username " + username);
