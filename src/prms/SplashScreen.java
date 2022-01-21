@@ -41,7 +41,7 @@ public class SplashScreen extends javax.swing.JFrame {
         jPanel1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         jPanel1.setPreferredSize(new java.awt.Dimension(500, 300));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-        jPanel1.add(BTSLogo, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, -70, 250, 240));
+        jPanel1.add(BTSLogo, new org.netbeans.lib.awtextra.AbsoluteConstraints(130, 20, 250, 240));
 
         Loading.setBackground(new java.awt.Color(0, 0, 32));
         Loading.setForeground(new java.awt.Color(0, 0, 32));

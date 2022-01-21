@@ -19,9 +19,9 @@ import javax.swing.SwingConstants;
 
 public class Login extends javax.swing.JFrame {
     
-    static String LogoLoc = "C:\\Users\\Brion\\Documents\\NetBeansProjects\\PRMS\\src\\prms\\wallpapers\\Brion Technological Systems3.png";
-    static String CarbonLoc = "C:\\Users\\Brion\\Documents\\NetBeansProjects\\PRMS\\src\\prms\\wallpapers\\CVO9Y72-black-carbon-wallpaper.jpg";
-    static String iconLoc = "C:\\Users\\Brion\\Documents\\NetBeansProjects\\PRMS\\src\\prms\\icons\\icons8_user_130px_1.png";
+    static String LogoLoc = "C:\\Users\\Laptop\\Documents\\NetBeansProjects\\PRMS\\src\\prms\\wallpapers\\Brion Technological Systems3.png";
+    static String CarbonLoc = "C:\\Users\\Laptop\\Documents\\NetBeansProjects\\PRMS\\src\\prms\\wallpapers\\CVO9Y72-black-carbon-wallpaper.jpg";
+    static String iconLoc = "C:\\Users\\Laptop\\Documents\\NetBeansProjects\\PRMS\\src\\prms\\icons\\icons8_user_130px_1.png";
     
     public Login() {
         initComponents();
