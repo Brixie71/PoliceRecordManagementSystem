@@ -31,6 +31,12 @@ public class PRMSOfficerGUI extends javax.swing.JFrame {
     public PRMSOfficerGUI() {
             initComponents();
             
+        // TAB BUG FIX
+        P1.setVisible(true);
+        P2.setVisible(false);
+        P3.setVisible(false);
+        P4.setVisible(false);
+            
             // CARBON FIBER BACKGROUND
         ImageIcon icon = new ImageIcon(getClass().getClassLoader().getResource(CarbonLoc));
         Image LoginBackground = icon.getImage();
