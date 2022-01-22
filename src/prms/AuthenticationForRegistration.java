@@ -10,6 +10,7 @@ import java.util.logging.Logger;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import javax.swing.SwingConstants;
+import static prms.Login.LogoLoc;
 
 public class AuthenticationForRegistration extends javax.swing.JFrame {
     public AuthenticationForRegistration() {
@@ -19,7 +20,7 @@ public class AuthenticationForRegistration extends javax.swing.JFrame {
         setLocation(size.width/2 - getWidth()/2, size.height/2 - getHeight()/2);
         
         // BTS LOGO
-        ImageIcon BTSLogoReg = new ImageIcon(Login.LogoLoc);
+        ImageIcon BTSLogoReg = new ImageIcon(getClass().getClassLoader().getResource(LogoLoc));
         Image logo = BTSLogoReg.getImage();
         Image LogoRegScale = logo.getScaledInstance(BTSLogoRegistration.getWidth(), BTSLogoRegistration.getHeight(), Image.SCALE_SMOOTH);
         ImageIcon scaledLogo = new ImageIcon(LogoRegScale);

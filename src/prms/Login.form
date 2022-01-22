@@ -104,7 +104,7 @@
           </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="170" y="270" width="181" height="34"/>
+              <AbsoluteConstraints x="190" y="270" width="160" height="35"/>
             </Constraint>
           </Constraints>
         </Component>
@@ -134,7 +134,7 @@
           </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="170" y="320" width="181" height="34"/>
+              <AbsoluteConstraints x="190" y="320" width="160" height="35"/>
             </Constraint>
           </Constraints>
         </Component>
@@ -214,13 +214,13 @@
             </Property>
             <Property name="horizontalAlignment" type="int" value="0"/>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/prms/icons/UsernameIcon.png"/>
+              <Image iconType="3" name="/res/UsernameIcon.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="USERNAME  : "/>
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="40" y="270" width="140" height="-1"/>
+              <AbsoluteConstraints x="60" y="270" width="130" height="35"/>
             </Constraint>
           </Constraints>
         </Component>
@@ -234,13 +234,13 @@
             </Property>
             <Property name="horizontalAlignment" type="int" value="0"/>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/prms/icons/PasswordIcon.png"/>
+              <Image iconType="3" name="/res/PasswordIcon.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="PASSWORD : "/>
           </Properties>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="50" y="320" width="-1" height="-1"/>
+              <AbsoluteConstraints x="60" y="320" width="130" height="35"/>
             </Constraint>
           </Constraints>
         </Component>
@@ -292,7 +292,7 @@
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/prms/icons/SelectedLoginIcon.png"/>
+              <Image iconType="3" name="/res/SelectedLoginIcon.png"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Login"/>
             <Property name="toolTipText" type="java.lang.String" value="Login to the Database"/>
@@ -303,11 +303,8 @@
             </Property>
             <Property name="defaultCapable" type="boolean" value="false"/>
             <Property name="doubleBuffered" type="boolean" value="true"/>
-            <Property name="pressedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/prms/icons/LoginIcon.png"/>
-            </Property>
-            <Property name="rolloverIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/prms/icons/LoginIcon.png"/>
+            <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/res/LoginIcon.png"/>
             </Property>
           </Properties>
           <Events>
@@ -331,9 +328,9 @@
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/prms/icons/icons8_add_user_male_32px_1.png"/>
+              <Image iconType="3" name="/res/icons8_add_user_male_32px_1.png"/>
             </Property>
-            <Property name="text" type="java.lang.String" value="Add  Account"/>
+            <Property name="text" type="java.lang.String" value="Create Account"/>
             <Property name="toolTipText" type="java.lang.String" value="Create Account"/>
             <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
               <Border info="org.netbeans.modules.form.compat2.border.MatteColorBorderInfo">
@@ -405,7 +402,7 @@
               <Color blue="41" green="3f" red="3c" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/prms/icons/icons8_minimize_window_32px.png"/>
+              <Image iconType="3" name="/icons8_minimize_window_32px.png"/>
             </Property>
             <Property name="toolTipText" type="java.lang.String" value="Exit"/>
             <Property name="alignmentY" type="float" value="0.0"/>
@@ -414,11 +411,11 @@
             </Property>
             <Property name="borderPainted" type="boolean" value="false"/>
             <Property name="name" type="java.lang.String" value="" noResource="true"/>
-            <Property name="pressedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/prms/icons/icons8_minimize_window_32px_2.png"/>
-            </Property>
             <Property name="rolloverIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/prms/icons/icons8_minimize_window_32px_1.png"/>
+              <Image iconType="3" name="/res/icons8_minimize_window_32px_2.png"/>
+            </Property>
+            <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/res/icons8_minimize_window_32px_1.png"/>
             </Property>
           </Properties>
           <Events>
@@ -439,7 +436,7 @@
               <Color blue="41" green="3f" red="3c" type="rgb"/>
             </Property>
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/prms/icons/icons8_x_coordinate_32px_1.png"/>
+              <Image iconType="3" name="/res/icons8_x_coordinate_32px_1.png"/>
             </Property>
             <Property name="toolTipText" type="java.lang.String" value="Exit"/>
             <Property name="alignmentY" type="float" value="0.0"/>
@@ -448,11 +445,11 @@
             </Property>
             <Property name="borderPainted" type="boolean" value="false"/>
             <Property name="name" type="java.lang.String" value="" noResource="true"/>
-            <Property name="pressedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/prms/icons/icons8_x_coordinate_32px_2.png"/>
-            </Property>
             <Property name="rolloverIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/prms/icons/icons8_x_coordinate_32px.png"/>
+              <Image iconType="3" name="/res/icons8_x_coordinate_32px_2.png"/>
+            </Property>
+            <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/res/icons8_x_coordinate_32px.png"/>
             </Property>
           </Properties>
           <Events>

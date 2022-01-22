@@ -32,14 +32,14 @@ public class Login extends javax.swing.JFrame {
         setLocation(size.width/2 - getWidth()/2, size.height/2 - getHeight()/2);        
         
         // CARBON FIBER BACKGROUND
-        ImageIcon icon = new ImageIcon(Login.CarbonLoc);
+        ImageIcon icon = new ImageIcon(getClass().getClassLoader().getResource(CarbonLoc));
         Image LoginBackground = icon.getImage();
         Image imgScale = LoginBackground.getScaledInstance(carbonFibrBackground.getWidth(), carbonFibrBackground.getHeight(), Image.SCALE_SMOOTH);
         ImageIcon scaledIcon = new ImageIcon(imgScale);
         carbonFibrBackground.setIcon(scaledIcon);
 
         // COMPANY LOGO
-        ImageIcon LoginArea = new ImageIcon(Login.LogoLoc);
+        ImageIcon LoginArea = new ImageIcon(getClass().getClassLoader().getResource(LogoLoc));
         Image LoginA = LoginArea.getImage();
         Image LoginAScale = LoginA.getScaledInstance(BTSBillboardLogo.getWidth(), BTSBillboardLogo.getHeight(), Image.SCALE_SMOOTH);
         ImageIcon ScaledLoginA = new ImageIcon(LoginAScale);
@@ -121,7 +121,7 @@ public class Login extends javax.swing.JFrame {
                 LoginUsernameKeyPressed(evt);
             }
         });
-        LoginPanel.add(LoginUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 270, 181, 34));
+        LoginPanel.add(LoginUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 270, 160, 35));
 
         LoginPassword.setBackground(new java.awt.Color(255, 255, 255));
         LoginPassword.setForeground(new java.awt.Color(0, 0, 0));
@@ -133,7 +133,7 @@ public class Login extends javax.swing.JFrame {
                 LoginPasswordActionPerformed(evt);
             }
         });
-        LoginPanel.add(LoginPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 320, 181, 34));
+        LoginPanel.add(LoginPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 320, 160, 35));
 
         viewPicture.setBackground(new java.awt.Color(255, 255, 255));
         viewPicture.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -160,16 +160,16 @@ public class Login extends javax.swing.JFrame {
         UsernameText.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
         UsernameText.setForeground(new java.awt.Color(255, 255, 255));
         UsernameText.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        UsernameText.setIcon(new javax.swing.ImageIcon(getClass().getResource("/prms/icons/UsernameIcon.png"))); // NOI18N
+        UsernameText.setIcon(new javax.swing.ImageIcon(getClass().getResource("/res/UsernameIcon.png"))); // NOI18N
         UsernameText.setText("USERNAME  : ");
-        LoginPanel.add(UsernameText, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 270, 140, -1));
+        LoginPanel.add(UsernameText, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 270, 130, 35));
 
         PasswordText.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
         PasswordText.setForeground(new java.awt.Color(255, 255, 255));
         PasswordText.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        PasswordText.setIcon(new javax.swing.ImageIcon(getClass().getResource("/prms/icons/PasswordIcon.png"))); // NOI18N
+        PasswordText.setIcon(new javax.swing.ImageIcon(getClass().getResource("/res/PasswordIcon.png"))); // NOI18N
         PasswordText.setText("PASSWORD : ");
-        LoginPanel.add(PasswordText, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 320, -1, -1));
+        LoginPanel.add(PasswordText, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 320, 130, 35));
 
         PRMSTitleMainText.setFont(new java.awt.Font("Impact", 0, 18)); // NOI18N
         PRMSTitleMainText.setForeground(new java.awt.Color(255, 255, 255));
@@ -188,14 +188,13 @@ public class Login extends javax.swing.JFrame {
         LoginButton.setBackground(new java.awt.Color(0, 0, 32));
         LoginButton.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         LoginButton.setForeground(new java.awt.Color(255, 255, 255));
-        LoginButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/prms/icons/SelectedLoginIcon.png"))); // NOI18N
+        LoginButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/res/SelectedLoginIcon.png"))); // NOI18N
         LoginButton.setText("Login");
         LoginButton.setToolTipText("Login to the Database");
         LoginButton.setBorder(new javax.swing.border.MatteBorder(null));
         LoginButton.setDefaultCapable(false);
         LoginButton.setDoubleBuffered(true);
-        LoginButton.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/prms/icons/LoginIcon.png"))); // NOI18N
-        LoginButton.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/prms/icons/LoginIcon.png"))); // NOI18N
+        LoginButton.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/res/LoginIcon.png"))); // NOI18N
         LoginButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 LoginButtonActionPerformed(evt);
@@ -206,8 +205,8 @@ public class Login extends javax.swing.JFrame {
         Registration.setBackground(new java.awt.Color(1, 0, 32));
         Registration.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         Registration.setForeground(new java.awt.Color(255, 255, 255));
-        Registration.setIcon(new javax.swing.ImageIcon(getClass().getResource("/prms/icons/icons8_add_user_male_32px_1.png"))); // NOI18N
-        Registration.setText("Add  Account");
+        Registration.setIcon(new javax.swing.ImageIcon(getClass().getResource("/res/icons8_add_user_male_32px_1.png"))); // NOI18N
+        Registration.setText("Create Account");
         Registration.setToolTipText("Create Account");
         Registration.setBorder(new javax.swing.border.MatteBorder(null));
         Registration.addActionListener(new java.awt.event.ActionListener() {
@@ -233,14 +232,14 @@ public class Login extends javax.swing.JFrame {
 
         MinimizerBtn.setBackground(new java.awt.Color(60, 63, 65));
         MinimizerBtn.setForeground(new java.awt.Color(60, 63, 65));
-        MinimizerBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/prms/icons/icons8_minimize_window_32px.png"))); // NOI18N
+        MinimizerBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons8_minimize_window_32px.png"))); // NOI18N
         MinimizerBtn.setToolTipText("Exit");
         MinimizerBtn.setAlignmentY(0.0F);
         MinimizerBtn.setBorder(null);
         MinimizerBtn.setBorderPainted(false);
         MinimizerBtn.setName(""); // NOI18N
-        MinimizerBtn.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/prms/icons/icons8_minimize_window_32px_2.png"))); // NOI18N
-        MinimizerBtn.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/prms/icons/icons8_minimize_window_32px_1.png"))); // NOI18N
+        MinimizerBtn.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/res/icons8_minimize_window_32px_2.png"))); // NOI18N
+        MinimizerBtn.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/res/icons8_minimize_window_32px_1.png"))); // NOI18N
         MinimizerBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 MinimizerBtnActionPerformed(evt);
@@ -250,14 +249,14 @@ public class Login extends javax.swing.JFrame {
 
         LoginExit.setBackground(new java.awt.Color(60, 63, 65));
         LoginExit.setForeground(new java.awt.Color(60, 63, 65));
-        LoginExit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/prms/icons/icons8_x_coordinate_32px_1.png"))); // NOI18N
+        LoginExit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/res/icons8_x_coordinate_32px_1.png"))); // NOI18N
         LoginExit.setToolTipText("Exit");
         LoginExit.setAlignmentY(0.0F);
         LoginExit.setBorder(null);
         LoginExit.setBorderPainted(false);
         LoginExit.setName(""); // NOI18N
-        LoginExit.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/prms/icons/icons8_x_coordinate_32px_2.png"))); // NOI18N
-        LoginExit.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/prms/icons/icons8_x_coordinate_32px.png"))); // NOI18N
+        LoginExit.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/res/icons8_x_coordinate_32px_2.png"))); // NOI18N
+        LoginExit.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/res/icons8_x_coordinate_32px.png"))); // NOI18N
         LoginExit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 LoginExitActionPerformed(evt);
@@ -369,7 +368,7 @@ public class Login extends javax.swing.JFrame {
                     viewPicture.setIcon(myPicture);
 
                 }else if(username.isEmpty()){
-                    ImageIcon imageIcon = new ImageIcon(Login.iconLoc);
+                    ImageIcon imageIcon = new ImageIcon(getClass().getClassLoader().getResource(iconLoc));
                     Image imagePicture = imageIcon.getImage();
 
                     Image resizeImage = imagePicture.getScaledInstance(130,130, Image.SCALE_SMOOTH);
@@ -378,7 +377,7 @@ public class Login extends javax.swing.JFrame {
                     viewName.setText("USERNAME FIELD IS EMPTY!");
                     
                 }else{
-                    ImageIcon imageIcon = new ImageIcon(Login.iconLoc);
+                    ImageIcon imageIcon = new ImageIcon(getClass().getClassLoader().getResource(iconLoc));
                     Image imagePicture = imageIcon.getImage();
                     Image resizeImage = imagePicture.getScaledInstance(130,130, Image.SCALE_SMOOTH);
                     ImageIcon myPicture = new ImageIcon(resizeImage);

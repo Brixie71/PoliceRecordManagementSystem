@@ -3,13 +3,14 @@ package prms;
 
 import java.awt.Image;
 import javax.swing.ImageIcon;
+import static prms.Login.LogoLoc;
 
 public class SplashScreen extends javax.swing.JFrame {
     public SplashScreen() { 
         initComponents();
         
         //  BTS LOGO CODE
-        ImageIcon BTSLogoReg = new ImageIcon(Login.LogoLoc);
+        ImageIcon BTSLogoReg = new ImageIcon(getClass().getClassLoader().getResource(LogoLoc));
         Image logo = BTSLogoReg.getImage();
         Image LogoRegScale = logo.getScaledInstance(BTSLogo.getWidth(), BTSLogo.getHeight(), Image.SCALE_SMOOTH);
         ImageIcon scaledLogo = new ImageIcon(LogoRegScale);
