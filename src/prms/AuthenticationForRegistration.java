@@ -107,14 +107,14 @@ public class AuthenticationForRegistration extends javax.swing.JFrame {
 
         MinimizerBtn.setBackground(new java.awt.Color(60, 63, 65));
         MinimizerBtn.setForeground(new java.awt.Color(60, 63, 65));
-        MinimizerBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/prms/icons/icons8_minimize_window_32px.png"))); // NOI18N
+        MinimizerBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/res/icons8_minimize_window_32px.png"))); // NOI18N
         MinimizerBtn.setToolTipText("Exit");
         MinimizerBtn.setAlignmentY(0.0F);
         MinimizerBtn.setBorder(null);
         MinimizerBtn.setBorderPainted(false);
         MinimizerBtn.setName(""); // NOI18N
-        MinimizerBtn.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/prms/icons/icons8_minimize_window_32px_2.png"))); // NOI18N
-        MinimizerBtn.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/prms/icons/icons8_minimize_window_32px_1.png"))); // NOI18N
+        MinimizerBtn.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/res/icons8_minimize_window_32px_1.png"))); // NOI18N
+        MinimizerBtn.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/res/icons8_minimize_window_32px_2.png"))); // NOI18N
         MinimizerBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 MinimizerBtnActionPerformed(evt);
@@ -124,8 +124,8 @@ public class AuthenticationForRegistration extends javax.swing.JFrame {
 
         backToLogin.setBackground(new java.awt.Color(60, 63, 65));
         backToLogin.setForeground(new java.awt.Color(60, 63, 65));
-        backToLogin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/prms/icons/icons8_back_to_32px_2.png"))); // NOI18N
-        backToLogin.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/prms/icons/icons8_back_32px_1.png"))); // NOI18N
+        backToLogin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/res/icons8_back_to_32px_2.png"))); // NOI18N
+        backToLogin.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/res/icons8_back_to_32px_1.png"))); // NOI18N
         backToLogin.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/prms/icons/icons8_back_to_32px_1.png"))); // NOI18N
         backToLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -136,14 +136,14 @@ public class AuthenticationForRegistration extends javax.swing.JFrame {
 
         AuthExit.setBackground(new java.awt.Color(60, 63, 65));
         AuthExit.setForeground(new java.awt.Color(60, 63, 65));
-        AuthExit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/prms/icons/icons8_x_coordinate_32px_1.png"))); // NOI18N
+        AuthExit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/res/icons8_x_coordinate_32px_1.png"))); // NOI18N
         AuthExit.setToolTipText("Exit");
         AuthExit.setAlignmentY(0.0F);
         AuthExit.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 1, 1, 1));
         AuthExit.setBorderPainted(false);
         AuthExit.setName(""); // NOI18N
-        AuthExit.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/prms/icons/icons8_x_coordinate_32px_2.png"))); // NOI18N
-        AuthExit.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/prms/icons/icons8_x_coordinate_32px.png"))); // NOI18N
+        AuthExit.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/res/icons8_x_coordinate_32px.png"))); // NOI18N
+        AuthExit.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/res/icons8_x_coordinate_32px_2.png"))); // NOI18N
         AuthExit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 AuthExitActionPerformed(evt);

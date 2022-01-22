@@ -24,13 +24,15 @@ import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableColumn;
 import javax.swing.table.TableRowSorter;
 import net.proteanit.sql.DbUtils;
+import static prms.Login.CarbonLoc;
+import static prms.Login.LogoLoc;
 
 public class PRMSOfficerGUI extends javax.swing.JFrame {
     public PRMSOfficerGUI() {
             initComponents();
             
             // CARBON FIBER BACKGROUND
-        ImageIcon icon = new ImageIcon(Login.CarbonLoc);
+        ImageIcon icon = new ImageIcon(getClass().getClassLoader().getResource(CarbonLoc));
         Image LoginBackground = icon.getImage();
         Image imgScale = LoginBackground.getScaledInstance(carbonFibrBackground.getWidth(), carbonFibrBackground.getHeight(), Image.SCALE_SMOOTH);
         ImageIcon scaledIcon = new ImageIcon(imgScale);
@@ -100,14 +102,14 @@ public class PRMSOfficerGUI extends javax.swing.JFrame {
         InfoTab.setBackground(new Color(128,128,128));
         
         // LOGO
-        ImageIcon BTSLogoAdm = new ImageIcon(Login.LogoLoc);
+        ImageIcon BTSLogoAdm = new ImageIcon(getClass().getClassLoader().getResource(LogoLoc));
         Image logo = BTSLogoAdm.getImage();
         Image LogoRegScale = logo.getScaledInstance(BTSLogoAdmin.getWidth(), BTSLogoAdmin.getHeight(), Image.SCALE_SMOOTH);
         ImageIcon scaledLogo = new ImageIcon(LogoRegScale);
         BTSLogoAdmin.setIcon(scaledLogo);
         
         //  BTS About LOGO CODE
-        ImageIcon BTSLogoAbout = new ImageIcon(Login.LogoLoc);
+        ImageIcon BTSLogoAbout = new ImageIcon(getClass().getClassLoader().getResource(LogoLoc));
         Image logoDisp = BTSLogoAbout.getImage();
         Image BTSAboutRegScale = logoDisp.getScaledInstance(BTSAbout.getWidth(), BTSAbout.getHeight(), Image.SCALE_SMOOTH);
         ImageIcon BTSAboutScaledLogo = new ImageIcon(BTSAboutRegScale);
@@ -394,7 +396,7 @@ public class PRMSOfficerGUI extends javax.swing.JFrame {
 
         viewPicture.setBackground(new java.awt.Color(255, 255, 255));
         viewPicture.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        viewPicture.setIcon(new javax.swing.ImageIcon(getClass().getResource("/prms/icons/icons8_user_130px_1.png"))); // NOI18N
+        viewPicture.setIcon(new javax.swing.ImageIcon(getClass().getResource("/res/icons8_user_130px_1.png"))); // NOI18N
         viewPicture.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(255, 208, 0), 2));
         viewPicture.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         viewPicture.setOpaque(true);
@@ -549,7 +551,7 @@ public class PRMSOfficerGUI extends javax.swing.JFrame {
 
         viewProfilePic.setBackground(new java.awt.Color(255, 255, 255));
         viewProfilePic.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        viewProfilePic.setIcon(new javax.swing.ImageIcon(getClass().getResource("/prms/icons/icons8_user_130px_1.png"))); // NOI18N
+        viewProfilePic.setIcon(new javax.swing.ImageIcon(getClass().getResource("/res/icons8_user_130px_1.png"))); // NOI18N
         viewProfilePic.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
         viewProfilePic.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         viewProfilePic.setOpaque(true);
@@ -572,7 +574,7 @@ public class PRMSOfficerGUI extends javax.swing.JFrame {
         BTSShadowText1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         BTSShadowText1.setText("Brion Tactical Systems");
         P4.add(BTSShadowText1, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 100, 290, 40));
-        P4.add(BTSAbout, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 20, 250, 240));
+        P4.add(BTSAbout, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 0, 370, 370));
 
         RegistrationMainText1.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
         RegistrationMainText1.setForeground(new java.awt.Color(255, 255, 255));
@@ -715,7 +717,7 @@ public class PRMSOfficerGUI extends javax.swing.JFrame {
         crimPicture.setBackground(new java.awt.Color(255, 255, 255));
         crimPicture.setForeground(new java.awt.Color(255, 255, 255));
         crimPicture.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        crimPicture.setIcon(new javax.swing.ImageIcon(getClass().getResource("/prms/icons/icons8_user_130px_1.png"))); // NOI18N
+        crimPicture.setIcon(new javax.swing.ImageIcon(getClass().getResource("/res/icons8_user_130px_1.png"))); // NOI18N
         crimPicture.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 208, 0), 1, true));
         crimPicture.setOpaque(true);
         P2.add(crimPicture, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 70, 130, 130));
@@ -1091,14 +1093,14 @@ public class PRMSOfficerGUI extends javax.swing.JFrame {
 
         MinimizerBtn.setBackground(new java.awt.Color(60, 63, 65));
         MinimizerBtn.setForeground(new java.awt.Color(60, 63, 65));
-        MinimizerBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/prms/icons/icons8_minimize_window_32px.png"))); // NOI18N
+        MinimizerBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/res/icons8_minimize_window_32px.png"))); // NOI18N
         MinimizerBtn.setToolTipText("Exit");
         MinimizerBtn.setAlignmentY(0.0F);
         MinimizerBtn.setBorder(null);
         MinimizerBtn.setBorderPainted(false);
         MinimizerBtn.setName(""); // NOI18N
-        MinimizerBtn.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/prms/icons/icons8_minimize_window_32px_2.png"))); // NOI18N
-        MinimizerBtn.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/prms/icons/icons8_minimize_window_32px_1.png"))); // NOI18N
+        MinimizerBtn.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/res/icons8_minimize_window_32px_1.png"))); // NOI18N
+        MinimizerBtn.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/res/icons8_minimize_window_32px_2.png"))); // NOI18N
         MinimizerBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 MinimizerBtnActionPerformed(evt);
@@ -1109,11 +1111,10 @@ public class PRMSOfficerGUI extends javax.swing.JFrame {
         LogOut.setBackground(new java.awt.Color(0, 34, 0));
         LogOut.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         LogOut.setForeground(new java.awt.Color(255, 255, 255));
-        LogOut.setIcon(new javax.swing.ImageIcon(getClass().getResource("/prms/icons/icons8_exit_32px_9.png"))); // NOI18N
+        LogOut.setIcon(new javax.swing.ImageIcon(getClass().getResource("/res/icons8_exit_32px_9.png"))); // NOI18N
         LogOut.setText("Log Out\n");
         LogOut.setHorizontalTextPosition(javax.swing.SwingConstants.LEFT);
-        LogOut.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/prms/icons/icons8_export_32px_7.png"))); // NOI18N
-        LogOut.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/prms/icons/icons8_exit_32px_9_1.png"))); // NOI18N
+        LogOut.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/res/icons8_exit_32px_9_1.png"))); // NOI18N
         LogOut.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 LogOutActionPerformed(evt);
