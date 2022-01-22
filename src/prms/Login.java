@@ -214,7 +214,7 @@ public class Login extends javax.swing.JFrame {
                 RegistrationActionPerformed(evt);
             }
         });
-        LoginPanel.add(Registration, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 380, 130, 40));
+        LoginPanel.add(Registration, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 380, 170, 40));
 
         loginDesign.setBackground(new java.awt.Color(255, 208, 0));
         loginDesign.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
