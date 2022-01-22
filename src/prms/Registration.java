@@ -18,7 +18,6 @@ import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 import javax.swing.SwingConstants;
 import javax.swing.filechooser.FileNameExtensionFilter;
-import static prms.Login.CarbonLoc;
 import static prms.Login.LogoLoc;
 import static prms.Login.iconLoc;
 
