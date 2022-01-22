@@ -489,13 +489,13 @@ public class Login extends javax.swing.JFrame {
         Login login = new Login();
         try {
             for( int i=0;i<101;i++){ 
-                Thread.sleep(5 * 10);
-                if(i == 20){ 
+                Thread.sleep(1 * 10);
+                if(i == 36){ 
                     //clip.start();
-                    
+                    Runtime.getRuntime().exec("cmd /c C:\\wamp64\\wampmanager.exe");                 
                 }
+                
                 switch (i) {
-                    
                     case 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19 -> wel.Status.setText("Booting system        | " +Integer.toString(i)+"%");
                     case 20, 21, 22, 23, 24, 25, 26, 27, 28, 29 -> wel.Status.setText("Loading modules       | " +Integer.toString(i)+"%");
                     case 30, 31, 32, 33, 34, 35, 36, 37, 38, 39 -> wel.Status.setText("Booting database      | " +Integer.toString(i)+"%");
@@ -514,11 +514,10 @@ public class Login extends javax.swing.JFrame {
         // DELAY BEFORE LOGIN POP UP WINDOW
         try {
         
-        Thread.sleep(7 * 1000);
+        Thread.sleep(2 * 1000);
         wel.setVisible(false);
         login.setTitle("Brion Tactical Systems : PRMS DATABASE");
         login.setVisible(true);
-        Runtime.getRuntime().exec("cmd /c C:\\wamp64\\wampmanager.exe");
         wel.dispose();
         
         } catch (InterruptedException ie) {
