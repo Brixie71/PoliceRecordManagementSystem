@@ -162,11 +162,8 @@
             <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
               <Image iconType="3" name="/res/icons8_back_to_32px_2.png"/>
             </Property>
-            <Property name="pressedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/res/icons8_back_to_32px_1.png"/>
-            </Property>
             <Property name="selectedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-              <Image iconType="3" name="/prms/icons/icons8_back_to_32px_1.png"/>
+              <Image iconType="3" name="/res/icons8_back_to_32px_1.png"/>
             </Property>
           </Properties>
           <Events>

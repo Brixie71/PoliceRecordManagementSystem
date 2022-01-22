@@ -24,6 +24,7 @@ import javax.swing.table.TableColumn;
 import javax.swing.table.TableRowSorter;
 import net.proteanit.sql.DbUtils;
 import static prms.Login.LogoLoc;
+import static prms.Login.iconLoc;
 
 public class ChooseAccountToModify extends javax.swing.JFrame {
 
@@ -763,7 +764,7 @@ public class ChooseAccountToModify extends javax.swing.JFrame {
         LoginPassword.setText("");
         
         // RESET Picture
-        ImageIcon imageIcon = new ImageIcon(Login.iconLoc);
+        ImageIcon imageIcon = new ImageIcon(getClass().getClassLoader().getResource(iconLoc));
         Image imagePicture = imageIcon.getImage();
         Image resizeImage = imagePicture.getScaledInstance(130,130, Image.SCALE_SMOOTH);
         ImageIcon myPicture = new ImageIcon(resizeImage);
