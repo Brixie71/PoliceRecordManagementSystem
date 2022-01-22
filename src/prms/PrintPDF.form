@@ -246,7 +246,7 @@
                   <Color blue="0" green="0" red="0" type="rgb"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/prms/icons/icons8_user_130px_1.png"/>
+                  <Image iconType="3" name="/res/icons8_user_130px_1.png"/>
                 </Property>
                 <Property name="text" type="java.lang.String" value="Photo"/>
                 <Property name="border" type="javax.swing.border.Border" editor="org.netbeans.modules.form.editors2.BorderEditor">
@@ -1079,7 +1079,7 @@
                   <Connection code="null&#xd;&#xa;" type="code"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/prms/icons/icons8_minimize_window_32px.png"/>
+                  <Image iconType="3" name="/res/icons8_minimize_window_32px.png"/>
                 </Property>
                 <Property name="toolTipText" type="java.lang.String" value="Exit"/>
                 <Property name="alignmentY" type="float" value="0.0"/>
@@ -1089,10 +1089,10 @@
                 <Property name="borderPainted" type="boolean" value="false"/>
                 <Property name="name" type="java.lang.String" value="" noResource="true"/>
                 <Property name="pressedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/prms/icons/icons8_minimize_window_32px_2.png"/>
+                  <Image iconType="3" name="/res/icons8_minimize_window_32px_1.png"/>
                 </Property>
                 <Property name="rolloverIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/prms/icons/icons8_minimize_window_32px_1.png"/>
+                  <Image iconType="3" name="/res/icons8_minimize_window_32px_2.png"/>
                 </Property>
               </Properties>
               <Events>
@@ -1113,17 +1113,17 @@
                   <Connection code="null&#xd;&#xa;" type="code"/>
                 </Property>
                 <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/prms/icons/icons8_x_coordinate_32px_1.png"/>
+                  <Image iconType="3" name="/res/icons8_x_coordinate_32px_1.png"/>
                 </Property>
                 <Property name="toolTipText" type="java.lang.String" value="Exit"/>
                 <Property name="alignmentY" type="float" value="0.0"/>
                 <Property name="borderPainted" type="boolean" value="false"/>
                 <Property name="name" type="java.lang.String" value="" noResource="true"/>
                 <Property name="pressedIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/prms/icons/icons8_x_coordinate_32px.png"/>
+                  <Image iconType="3" name="/res/icons8_x_coordinate_32px.png"/>
                 </Property>
                 <Property name="rolloverIcon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
-                  <Image iconType="3" name="/prms/icons/icons8_x_coordinate_32px_2.png"/>
+                  <Image iconType="3" name="/res/icons8_x_coordinate_32px_2.png"/>
                 </Property>
               </Properties>
               <Events>

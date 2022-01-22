@@ -121,7 +121,7 @@ public class Login extends javax.swing.JFrame {
                 LoginUsernameKeyPressed(evt);
             }
         });
-        LoginPanel.add(LoginUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 270, 181, 34));
+        LoginPanel.add(LoginUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 270, 160, 35));
 
         LoginPassword.setBackground(new java.awt.Color(255, 255, 255));
         LoginPassword.setForeground(new java.awt.Color(0, 0, 0));
@@ -133,10 +133,11 @@ public class Login extends javax.swing.JFrame {
                 LoginPasswordActionPerformed(evt);
             }
         });
-        LoginPanel.add(LoginPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 320, 181, 34));
+        LoginPanel.add(LoginPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 320, 160, 35));
 
         viewPicture.setBackground(new java.awt.Color(255, 255, 255));
         viewPicture.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        viewPicture.setIcon(new javax.swing.ImageIcon(getClass().getResource("/res/icons8_user_130px_1.png"))); // NOI18N
         viewPicture.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 1, true));
         viewPicture.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         viewPicture.setOpaque(true);
@@ -159,14 +160,16 @@ public class Login extends javax.swing.JFrame {
         UsernameText.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
         UsernameText.setForeground(new java.awt.Color(255, 255, 255));
         UsernameText.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        UsernameText.setIcon(new javax.swing.ImageIcon(getClass().getResource("/res/UsernameIcon.png"))); // NOI18N
         UsernameText.setText("USERNAME  : ");
-        LoginPanel.add(UsernameText, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 270, 140, -1));
+        LoginPanel.add(UsernameText, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 270, 130, 35));
 
         PasswordText.setFont(new java.awt.Font("Verdana", 0, 12)); // NOI18N
         PasswordText.setForeground(new java.awt.Color(255, 255, 255));
         PasswordText.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        PasswordText.setIcon(new javax.swing.ImageIcon(getClass().getResource("/res/PasswordIcon.png"))); // NOI18N
         PasswordText.setText("PASSWORD : ");
-        LoginPanel.add(PasswordText, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 320, -1, -1));
+        LoginPanel.add(PasswordText, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 320, 130, 35));
 
         PRMSTitleMainText.setFont(new java.awt.Font("Impact", 0, 18)); // NOI18N
         PRMSTitleMainText.setForeground(new java.awt.Color(255, 255, 255));
@@ -185,11 +188,13 @@ public class Login extends javax.swing.JFrame {
         LoginButton.setBackground(new java.awt.Color(0, 0, 32));
         LoginButton.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         LoginButton.setForeground(new java.awt.Color(255, 255, 255));
+        LoginButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/res/SelectedLoginIcon.png"))); // NOI18N
         LoginButton.setText("Login");
         LoginButton.setToolTipText("Login to the Database");
         LoginButton.setBorder(new javax.swing.border.MatteBorder(null));
         LoginButton.setDefaultCapable(false);
         LoginButton.setDoubleBuffered(true);
+        LoginButton.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/res/LoginIcon.png"))); // NOI18N
         LoginButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 LoginButtonActionPerformed(evt);
@@ -200,7 +205,8 @@ public class Login extends javax.swing.JFrame {
         Registration.setBackground(new java.awt.Color(1, 0, 32));
         Registration.setFont(new java.awt.Font("Tahoma", 0, 12)); // NOI18N
         Registration.setForeground(new java.awt.Color(255, 255, 255));
-        Registration.setText("Add  Account");
+        Registration.setIcon(new javax.swing.ImageIcon(getClass().getResource("/res/icons8_add_user_male_32px_1.png"))); // NOI18N
+        Registration.setText("Create Account");
         Registration.setToolTipText("Create Account");
         Registration.setBorder(new javax.swing.border.MatteBorder(null));
         Registration.addActionListener(new java.awt.event.ActionListener() {
@@ -208,7 +214,7 @@ public class Login extends javax.swing.JFrame {
                 RegistrationActionPerformed(evt);
             }
         });
-        LoginPanel.add(Registration, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 380, 130, 40));
+        LoginPanel.add(Registration, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 380, 170, 40));
 
         loginDesign.setBackground(new java.awt.Color(255, 208, 0));
         loginDesign.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
@@ -226,11 +232,14 @@ public class Login extends javax.swing.JFrame {
 
         MinimizerBtn.setBackground(new java.awt.Color(60, 63, 65));
         MinimizerBtn.setForeground(new java.awt.Color(60, 63, 65));
+        MinimizerBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icons8_minimize_window_32px.png"))); // NOI18N
         MinimizerBtn.setToolTipText("Exit");
         MinimizerBtn.setAlignmentY(0.0F);
         MinimizerBtn.setBorder(null);
         MinimizerBtn.setBorderPainted(false);
         MinimizerBtn.setName(""); // NOI18N
+        MinimizerBtn.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/res/icons8_minimize_window_32px_2.png"))); // NOI18N
+        MinimizerBtn.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/res/icons8_minimize_window_32px_1.png"))); // NOI18N
         MinimizerBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 MinimizerBtnActionPerformed(evt);
@@ -240,11 +249,14 @@ public class Login extends javax.swing.JFrame {
 
         LoginExit.setBackground(new java.awt.Color(60, 63, 65));
         LoginExit.setForeground(new java.awt.Color(60, 63, 65));
+        LoginExit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/res/icons8_x_coordinate_32px_1.png"))); // NOI18N
         LoginExit.setToolTipText("Exit");
         LoginExit.setAlignmentY(0.0F);
         LoginExit.setBorder(null);
         LoginExit.setBorderPainted(false);
         LoginExit.setName(""); // NOI18N
+        LoginExit.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/res/icons8_x_coordinate_32px_2.png"))); // NOI18N
+        LoginExit.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/res/icons8_x_coordinate_32px.png"))); // NOI18N
         LoginExit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 LoginExitActionPerformed(evt);
@@ -477,13 +489,13 @@ public class Login extends javax.swing.JFrame {
         Login login = new Login();
         try {
             for( int i=0;i<101;i++){ 
-                Thread.sleep(5 * 10);
-                if(i == 20){ 
+                Thread.sleep(1 * 10);
+                if(i == 36){ 
                     //clip.start();
-                    
+                    Runtime.getRuntime().exec("cmd /c C:\\wamp64\\wampmanager.exe");                 
                 }
+                
                 switch (i) {
-                    
                     case 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19 -> wel.Status.setText("Booting system        | " +Integer.toString(i)+"%");
                     case 20, 21, 22, 23, 24, 25, 26, 27, 28, 29 -> wel.Status.setText("Loading modules       | " +Integer.toString(i)+"%");
                     case 30, 31, 32, 33, 34, 35, 36, 37, 38, 39 -> wel.Status.setText("Booting database      | " +Integer.toString(i)+"%");
@@ -502,11 +514,10 @@ public class Login extends javax.swing.JFrame {
         // DELAY BEFORE LOGIN POP UP WINDOW
         try {
         
-        Thread.sleep(7 * 1000);
+        Thread.sleep(2 * 1000);
         wel.setVisible(false);
         login.setTitle("Brion Tactical Systems : PRMS DATABASE");
         login.setVisible(true);
-        Runtime.getRuntime().exec("cmd /c C:\\wamp64\\wampmanager.exe");
         wel.dispose();
         
         } catch (InterruptedException ie) {

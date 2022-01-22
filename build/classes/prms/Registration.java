@@ -18,6 +18,7 @@ import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 import javax.swing.SwingConstants;
 import javax.swing.filechooser.FileNameExtensionFilter;
+import static prms.Login.LogoLoc;
 
 public class Registration extends javax.swing.JFrame {
     public Registration() {
@@ -29,7 +30,7 @@ public class Registration extends javax.swing.JFrame {
         setLocation(size.width/2 - getWidth()/2, size.height/2 - getHeight()/2);
         
         // REGISTRATION BTS BILLBOARD LOGO
-        ImageIcon BTSLogoReg = new ImageIcon(Login.LogoLoc);
+        ImageIcon BTSLogoReg = new ImageIcon(getClass().getClassLoader().getResource(LogoLoc));
         Image logo = BTSLogoReg.getImage();
         Image LogoRegScale = logo.getScaledInstance(BTSLogoRegistration.getWidth(), BTSLogoRegistration.getHeight(), Image.SCALE_SMOOTH);
         ImageIcon scaledLogo = new ImageIcon(LogoRegScale);
@@ -291,14 +292,14 @@ public class Registration extends javax.swing.JFrame {
 
         MinimizerBtn.setBackground(new java.awt.Color(60, 63, 65));
         MinimizerBtn.setForeground(new java.awt.Color(60, 63, 65));
-        MinimizerBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/prms/icons/icons8_minimize_window_32px.png"))); // NOI18N
+        MinimizerBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/res/icons8_minimize_window_32px.png"))); // NOI18N
         MinimizerBtn.setToolTipText("Exit");
         MinimizerBtn.setAlignmentY(0.0F);
         MinimizerBtn.setBorder(null);
         MinimizerBtn.setBorderPainted(false);
         MinimizerBtn.setName(""); // NOI18N
-        MinimizerBtn.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/prms/icons/icons8_minimize_window_32px_2.png"))); // NOI18N
-        MinimizerBtn.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/prms/icons/icons8_minimize_window_32px_1.png"))); // NOI18N
+        MinimizerBtn.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/res/icons8_minimize_window_32px_1.png"))); // NOI18N
+        MinimizerBtn.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/res/icons8_minimize_window_32px_2.png"))); // NOI18N
         MinimizerBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 MinimizerBtnActionPerformed(evt);
@@ -308,10 +309,8 @@ public class Registration extends javax.swing.JFrame {
 
         backToLogin.setBackground(new java.awt.Color(60, 63, 65));
         backToLogin.setForeground(new java.awt.Color(60, 63, 65));
-        backToLogin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/prms/icons/icons8_back_to_32px_2.png"))); // NOI18N
-        backToLogin.setDisabledSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/prms/icons/icons8_back_to_32px_1.png"))); // NOI18N
-        backToLogin.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/prms/icons/icons8_back_32px_1.png"))); // NOI18N
-        backToLogin.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/prms/icons/icons8_back_to_32px_1.png"))); // NOI18N
+        backToLogin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/res/icons8_back_to_32px_2.png"))); // NOI18N
+        backToLogin.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/res/icons8_back_to_32px_1.png"))); // NOI18N
         backToLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 backToLoginActionPerformed(evt);
@@ -321,13 +320,13 @@ public class Registration extends javax.swing.JFrame {
 
         RegistrationExit.setBackground(new java.awt.Color(60, 63, 65));
         RegistrationExit.setForeground(new java.awt.Color(60, 63, 65));
-        RegistrationExit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/prms/icons/icons8_x_coordinate_32px_1.png"))); // NOI18N
+        RegistrationExit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/res/icons8_x_coordinate_32px_1.png"))); // NOI18N
         RegistrationExit.setToolTipText("Exit");
         RegistrationExit.setAlignmentY(0.0F);
         RegistrationExit.setBorderPainted(false);
         RegistrationExit.setName(""); // NOI18N
-        RegistrationExit.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/prms/icons/icons8_x_coordinate_32px.png"))); // NOI18N
-        RegistrationExit.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/prms/icons/icons8_x_coordinate_32px_2.png"))); // NOI18N
+        RegistrationExit.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/res/icons8_x_coordinate_32px.png"))); // NOI18N
+        RegistrationExit.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/res/icons8_x_coordinate_32px_2.png"))); // NOI18N
         RegistrationExit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 RegistrationExitActionPerformed(evt);
@@ -376,7 +375,7 @@ public class Registration extends javax.swing.JFrame {
         userPicture.setBackground(new java.awt.Color(255, 255, 255));
         userPicture.setForeground(new java.awt.Color(255, 255, 255));
         userPicture.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        userPicture.setIcon(new javax.swing.ImageIcon(getClass().getResource("/prms/icons/icons8_user_130px_1.png"))); // NOI18N
+        userPicture.setIcon(new javax.swing.ImageIcon(getClass().getResource("/res/icons8_user_130px_1.png"))); // NOI18N
         userPicture.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 208, 0), 1, true));
         userPicture.setOpaque(true);
         RegistrationPanel.add(userPicture, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 100, 130, 130));

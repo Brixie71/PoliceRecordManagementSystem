@@ -1,1 +1,0 @@
-prms.SplashScreen

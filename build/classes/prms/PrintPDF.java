@@ -29,6 +29,8 @@ import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableColumn;
 import javax.swing.table.TableRowSorter;
 import net.proteanit.sql.DbUtils;
+import static prms.Login.LogoLoc;
+import static prms.Login.iconLoc;
 
 /**
  *
@@ -89,7 +91,7 @@ public class PrintPDF extends javax.swing.JFrame {
             carbonFibrBackground.setIcon(scaledIcon);
             
             // LOGO
-            ImageIcon BTSLogoPrnt = new ImageIcon(Login.LogoLoc);
+            ImageIcon BTSLogoPrnt = new ImageIcon(getClass().getClassLoader().getResource(LogoLoc));
             Image logo = BTSLogoPrnt.getImage();
             Image LogoPrntScale = logo.getScaledInstance(BTSLogoPrint.getWidth(), BTSLogoPrint.getHeight(), Image.SCALE_SMOOTH);
             ImageIcon scaledLogo = new ImageIcon(LogoPrntScale);
@@ -243,7 +245,7 @@ public class PrintPDF extends javax.swing.JFrame {
         fakePdfPanel.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 30, -1, -1));
 
         viewPicture.setBackground(new java.awt.Color(0, 0, 0));
-        viewPicture.setIcon(new javax.swing.ImageIcon(getClass().getResource("/prms/icons/icons8_user_130px_1.png"))); // NOI18N
+        viewPicture.setIcon(new javax.swing.ImageIcon(getClass().getResource("/res/icons8_user_130px_1.png"))); // NOI18N
         viewPicture.setText("Photo");
         viewPicture.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         viewPicture.setPreferredSize(new java.awt.Dimension(130, 130));
@@ -487,7 +489,6 @@ public class PrintPDF extends javax.swing.JFrame {
         Age.setForeground(new java.awt.Color(0, 0, 0));
         Age.setAutoscrolls(false);
         Age.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 6, 1, 6));
-        Age.setOpaque(false);
         Age.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 AgeActionPerformed(evt);
@@ -516,14 +517,14 @@ public class PrintPDF extends javax.swing.JFrame {
         );
         MinimizerBtn.setForeground(null
         );
-        MinimizerBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/prms/icons/icons8_minimize_window_32px.png"))); // NOI18N
+        MinimizerBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/res/icons8_minimize_window_32px.png"))); // NOI18N
         MinimizerBtn.setToolTipText("Exit");
         MinimizerBtn.setAlignmentY(0.0F);
         MinimizerBtn.setBorder(null);
         MinimizerBtn.setBorderPainted(false);
         MinimizerBtn.setName(""); // NOI18N
-        MinimizerBtn.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/prms/icons/icons8_minimize_window_32px_2.png"))); // NOI18N
-        MinimizerBtn.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/prms/icons/icons8_minimize_window_32px_1.png"))); // NOI18N
+        MinimizerBtn.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/res/icons8_minimize_window_32px_1.png"))); // NOI18N
+        MinimizerBtn.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/res/icons8_minimize_window_32px_2.png"))); // NOI18N
         MinimizerBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 MinimizerBtnActionPerformed(evt);
@@ -535,13 +536,13 @@ public class PrintPDF extends javax.swing.JFrame {
         );
         RegistrationExit.setForeground(null
         );
-        RegistrationExit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/prms/icons/icons8_x_coordinate_32px_1.png"))); // NOI18N
+        RegistrationExit.setIcon(new javax.swing.ImageIcon(getClass().getResource("/res/icons8_x_coordinate_32px_1.png"))); // NOI18N
         RegistrationExit.setToolTipText("Exit");
         RegistrationExit.setAlignmentY(0.0F);
         RegistrationExit.setBorderPainted(false);
         RegistrationExit.setName(""); // NOI18N
-        RegistrationExit.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/prms/icons/icons8_x_coordinate_32px.png"))); // NOI18N
-        RegistrationExit.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/prms/icons/icons8_x_coordinate_32px_2.png"))); // NOI18N
+        RegistrationExit.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/res/icons8_x_coordinate_32px.png"))); // NOI18N
+        RegistrationExit.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/res/icons8_x_coordinate_32px_2.png"))); // NOI18N
         RegistrationExit.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 RegistrationExitActionPerformed(evt);
@@ -674,7 +675,7 @@ public class PrintPDF extends javax.swing.JFrame {
         origin.setText("");
         crime.setText("");
         DOR.setText("");
-        ImageIcon imageIcon = new ImageIcon(Login.iconLoc);
+        ImageIcon imageIcon = new ImageIcon(getClass().getClassLoader().getResource(iconLoc));
         Image imagePicture = imageIcon.getImage();
         Image resizeImage = imagePicture.getScaledInstance(130,130, Image.SCALE_SMOOTH);
         ImageIcon myPicture = new ImageIcon(resizeImage);

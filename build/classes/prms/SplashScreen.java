@@ -3,13 +3,14 @@ package prms;
 
 import java.awt.Image;
 import javax.swing.ImageIcon;
+import static prms.Login.LogoLoc;
 
 public class SplashScreen extends javax.swing.JFrame {
     public SplashScreen() { 
         initComponents();
         
         //  BTS LOGO CODE
-        ImageIcon BTSLogoReg = new ImageIcon(Login.LogoLoc);
+        ImageIcon BTSLogoReg = new ImageIcon(getClass().getClassLoader().getResource(LogoLoc));
         Image logo = BTSLogoReg.getImage();
         Image LogoRegScale = logo.getScaledInstance(BTSLogo.getWidth(), BTSLogo.getHeight(), Image.SCALE_SMOOTH);
         ImageIcon scaledLogo = new ImageIcon(LogoRegScale);
@@ -93,25 +94,6 @@ public class SplashScreen extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
-    // MAIN METHOD
-    public static void main(String args[]) {
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(SplashScreen.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JLabel BTSLogo;

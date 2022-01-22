@@ -23,6 +23,7 @@ import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableColumn;
 import javax.swing.table.TableRowSorter;
 import net.proteanit.sql.DbUtils;
+import static prms.Login.LogoLoc;
 
 public class ChooseAccountToModify extends javax.swing.JFrame {
 
@@ -70,7 +71,7 @@ public class ChooseAccountToModify extends javax.swing.JFrame {
             }
 
         // BTS BILLBOARD LOGO
-        ImageIcon BTSLogoReg = new ImageIcon(Login.LogoLoc);
+        ImageIcon BTSLogoReg = new ImageIcon(getClass().getClassLoader().getResource(LogoLoc));
         Image logo = BTSLogoReg.getImage();
         Image LogoRegScale = logo.getScaledInstance(BTSLogoRegistration.getWidth(), BTSLogoRegistration.getHeight(), Image.SCALE_SMOOTH);
         ImageIcon scaledLogo = new ImageIcon(LogoRegScale);
@@ -160,7 +161,7 @@ public class ChooseAccountToModify extends javax.swing.JFrame {
 
         userPicture.setBackground(new java.awt.Color(255, 255, 255));
         userPicture.setForeground(new java.awt.Color(255, 255, 255));
-        userPicture.setIcon(new javax.swing.ImageIcon(getClass().getResource("/prms/icons/icons8_user_130px_1.png"))); // NOI18N
+        userPicture.setIcon(new javax.swing.ImageIcon(getClass().getResource("/res/icons8_user_130px_1.png"))); // NOI18N
         userPicture.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 208, 0), 1, true));
         userPicture.setOpaque(true);
         jPanel1.add(userPicture, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 110, 130, 130));
@@ -403,11 +404,9 @@ public class ChooseAccountToModify extends javax.swing.JFrame {
 
         backtoModifyAccount.setBackground(new java.awt.Color(60, 63, 65));
         backtoModifyAccount.setForeground(new java.awt.Color(60, 63, 65));
-        backtoModifyAccount.setIcon(new javax.swing.ImageIcon(getClass().getResource("/prms/icons/icons8_back_to_32px_2.png"))); // NOI18N
-        backtoModifyAccount.setDisabledSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/prms/icons/icons8_back_to_32px_1.png"))); // NOI18N
+        backtoModifyAccount.setIcon(new javax.swing.ImageIcon(getClass().getResource("/res/icons8_back_to_32px_2.png"))); // NOI18N
         backtoModifyAccount.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        backtoModifyAccount.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/prms/icons/icons8_back_32px_1.png"))); // NOI18N
-        backtoModifyAccount.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/prms/icons/icons8_back_to_32px_1.png"))); // NOI18N
+        backtoModifyAccount.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/res/icons8_back_to_32px_1.png"))); // NOI18N
         backtoModifyAccount.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 backtoModifyAccountActionPerformed(evt);
@@ -417,14 +416,14 @@ public class ChooseAccountToModify extends javax.swing.JFrame {
 
         MinimizerBtn.setBackground(new java.awt.Color(60, 63, 65));
         MinimizerBtn.setForeground(new java.awt.Color(60, 63, 65));
-        MinimizerBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/prms/icons/icons8_minimize_window_32px.png"))); // NOI18N
+        MinimizerBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/res/icons8_minimize_window_32px.png"))); // NOI18N
         MinimizerBtn.setToolTipText("Exit");
         MinimizerBtn.setAlignmentY(0.0F);
         MinimizerBtn.setBorder(null);
         MinimizerBtn.setBorderPainted(false);
         MinimizerBtn.setName(""); // NOI18N
-        MinimizerBtn.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/prms/icons/icons8_minimize_window_32px_2.png"))); // NOI18N
-        MinimizerBtn.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/prms/icons/icons8_minimize_window_32px_1.png"))); // NOI18N
+        MinimizerBtn.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/res/icons8_minimize_window_32px_1.png"))); // NOI18N
+        MinimizerBtn.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/res/icons8_minimize_window_32px_2.png"))); // NOI18N
         MinimizerBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 MinimizerBtnActionPerformed(evt);
@@ -479,7 +478,6 @@ public class ChooseAccountToModify extends javax.swing.JFrame {
         id.setBackground(new java.awt.Color(32, 32, 32));
         id.setForeground(new java.awt.Color(255, 255, 255));
         id.setBorder(null);
-        id.setOpaque(false);
         id.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 idActionPerformed(evt);
