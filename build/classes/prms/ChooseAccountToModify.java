@@ -24,6 +24,7 @@ import javax.swing.table.TableColumn;
 import javax.swing.table.TableRowSorter;
 import net.proteanit.sql.DbUtils;
 import static prms.Login.LogoLoc;
+import static prms.Login.iconLoc;
 
 public class ChooseAccountToModify extends javax.swing.JFrame {
 
@@ -176,16 +177,6 @@ public class ChooseAccountToModify extends javax.swing.JFrame {
         firstname.setForeground(new java.awt.Color(0, 0, 0));
         firstname.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 6, 1, 6));
         firstname.setSelectionColor(new java.awt.Color(255, 208, 0));
-        firstname.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                firstnameActionPerformed(evt);
-            }
-        });
-        firstname.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
-            public void propertyChange(java.beans.PropertyChangeEvent evt) {
-                firstnamePropertyChange(evt);
-            }
-        });
         jPanel1.add(firstname, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 100, 250, 30));
 
         jLabel7.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -198,11 +189,6 @@ public class ChooseAccountToModify extends javax.swing.JFrame {
         station.setForeground(new java.awt.Color(0, 0, 0));
         station.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 6, 1, 6));
         station.setSelectionColor(new java.awt.Color(255, 208, 0));
-        station.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                stationActionPerformed(evt);
-            }
-        });
         jPanel1.add(station, new org.netbeans.lib.awtextra.AbsoluteConstraints(620, 100, 170, 30));
 
         jLabel3.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -215,11 +201,6 @@ public class ChooseAccountToModify extends javax.swing.JFrame {
         middlename.setForeground(new java.awt.Color(0, 0, 0));
         middlename.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 6, 1, 6));
         middlename.setSelectionColor(new java.awt.Color(255, 208, 0));
-        middlename.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                middlenameActionPerformed(evt);
-            }
-        });
         jPanel1.add(middlename, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 140, 250, 30));
 
         jLabel5.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -232,11 +213,6 @@ public class ChooseAccountToModify extends javax.swing.JFrame {
         rank.setForeground(new java.awt.Color(0, 0, 0));
         rank.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 6, 1, 6));
         rank.setSelectionColor(new java.awt.Color(255, 208, 0));
-        rank.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                rankActionPerformed(evt);
-            }
-        });
         jPanel1.add(rank, new org.netbeans.lib.awtextra.AbsoluteConstraints(610, 140, 180, 30));
 
         jLabel8.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -249,11 +225,6 @@ public class ChooseAccountToModify extends javax.swing.JFrame {
         lastname.setForeground(new java.awt.Color(0, 0, 0));
         lastname.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 6, 1, 6));
         lastname.setSelectionColor(new java.awt.Color(255, 208, 0));
-        lastname.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                lastnameActionPerformed(evt);
-            }
-        });
         jPanel1.add(lastname, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 180, 250, 30));
 
         jLabel11.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -266,11 +237,6 @@ public class ChooseAccountToModify extends javax.swing.JFrame {
         LoginUsername.setForeground(new java.awt.Color(0, 0, 0));
         LoginUsername.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 6, 1, 6));
         LoginUsername.setSelectionColor(new java.awt.Color(255, 208, 0));
-        LoginUsername.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                LoginUsernameActionPerformed(evt);
-            }
-        });
         jPanel1.add(LoginUsername, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 180, 190, 30));
 
         jLabel9.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -283,11 +249,6 @@ public class ChooseAccountToModify extends javax.swing.JFrame {
         age.setForeground(new java.awt.Color(0, 0, 0));
         age.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 6, 1, 6));
         age.setSelectionColor(new java.awt.Color(255, 208, 0));
-        age.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                ageActionPerformed(evt);
-            }
-        });
         jPanel1.add(age, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 220, 50, 30));
 
         jLabel10.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -300,11 +261,6 @@ public class ChooseAccountToModify extends javax.swing.JFrame {
         contactnumber.setForeground(new java.awt.Color(0, 0, 0));
         contactnumber.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 6, 1, 6));
         contactnumber.setSelectionColor(new java.awt.Color(255, 208, 0));
-        contactnumber.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                contactnumberActionPerformed(evt);
-            }
-        });
         jPanel1.add(contactnumber, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 220, 130, 30));
 
         jLabel12.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -317,11 +273,6 @@ public class ChooseAccountToModify extends javax.swing.JFrame {
         LoginPassword.setForeground(new java.awt.Color(0, 0, 0));
         LoginPassword.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 6, 1, 6));
         LoginPassword.setSelectionColor(new java.awt.Color(255, 208, 0));
-        LoginPassword.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                LoginPasswordActionPerformed(evt);
-            }
-        });
         jPanel1.add(LoginPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 220, 190, 30));
 
         ImageChooser.setBackground(new java.awt.Color(0, 0, 32));
@@ -346,11 +297,6 @@ public class ChooseAccountToModify extends javax.swing.JFrame {
         address.setForeground(new java.awt.Color(0, 0, 0));
         address.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 6, 1, 6));
         address.setSelectionColor(new java.awt.Color(255, 208, 0));
-        address.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                addressActionPerformed(evt);
-            }
-        });
         jPanel1.add(address, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 260, 530, 30));
 
         jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
@@ -364,11 +310,6 @@ public class ChooseAccountToModify extends javax.swing.JFrame {
         userType.setMaximumRowCount(2);
         userType.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Dispatcher", "Police Officer" }));
         userType.setOpaque(true);
-        userType.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                userTypeActionPerformed(evt);
-            }
-        });
         jPanel1.add(userType, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 300, 210, 30));
 
         deleteAccountButton.setBackground(new java.awt.Color(0, 0, 32));
@@ -478,11 +419,6 @@ public class ChooseAccountToModify extends javax.swing.JFrame {
         id.setBackground(new java.awt.Color(32, 32, 32));
         id.setForeground(new java.awt.Color(255, 255, 255));
         id.setBorder(null);
-        id.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                idActionPerformed(evt);
-            }
-        });
         jPanel1.add(id, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 300, 50, 30));
 
         searchAccounts.setBackground(new java.awt.Color(255, 255, 255));
@@ -578,26 +514,6 @@ public class ChooseAccountToModify extends javax.swing.JFrame {
         xMouse = evt.getX();
         yMouse = evt.getY();
     }//GEN-LAST:event_FrameDragMousePressed
-
-    private void firstnamePropertyChange(java.beans.PropertyChangeEvent evt) {//GEN-FIRST:event_firstnamePropertyChange
-
-    }//GEN-LAST:event_firstnamePropertyChange
-
-    private void stationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_stationActionPerformed
-
-    }//GEN-LAST:event_stationActionPerformed
-
-    private void lastnameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_lastnameActionPerformed
-
-    }//GEN-LAST:event_lastnameActionPerformed
-
-    private void LoginUsernameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoginUsernameActionPerformed
-
-    }//GEN-LAST:event_LoginUsernameActionPerformed
-
-    private void LoginPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoginPasswordActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_LoginPasswordActionPerformed
     public ImageIcon resizePic(String picPath){
    
         ImageIcon ProfilePicture = new ImageIcon(picPath);
@@ -637,11 +553,7 @@ public class ChooseAccountToModify extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_ImageChooserActionPerformed
     
-    // CHOOSE ACCOUNT TYPE 
-    private void userTypeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userTypeActionPerformed
-        // TODO add your handling code here.
-    }//GEN-LAST:event_userTypeActionPerformed
-    
+   
     // DELETE DATA ON DATABASE ( JButton )
     private void deleteAccountButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteAccountButtonActionPerformed
         int response = JOptionPane.showConfirmDialog(this, "Are you sure you want to delete this account?","Confirm Deletion",JOptionPane.YES_NO_OPTION, JOptionPane.QUESTION_MESSAGE);
@@ -719,34 +631,6 @@ public class ChooseAccountToModify extends javax.swing.JFrame {
             }
         }                                      
     }//GEN-LAST:event_updateAccountButtonActionPerformed
-
-    private void firstnameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_firstnameActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_firstnameActionPerformed
-
-    private void middlenameActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_middlenameActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_middlenameActionPerformed
-
-    private void ageActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ageActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_ageActionPerformed
-
-    private void contactnumberActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_contactnumberActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_contactnumberActionPerformed
-
-    private void addressActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addressActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_addressActionPerformed
-
-    private void rankActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_rankActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_rankActionPerformed
-
-    private void idActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_idActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_idActionPerformed
     
     
         // CLEAR FORM FIELDS
@@ -763,7 +647,7 @@ public class ChooseAccountToModify extends javax.swing.JFrame {
         LoginPassword.setText("");
         
         // RESET Picture
-        ImageIcon imageIcon = new ImageIcon(Login.iconLoc);
+        ImageIcon imageIcon = new ImageIcon(getClass().getClassLoader().getResource(iconLoc));
         Image imagePicture = imageIcon.getImage();
         Image resizeImage = imagePicture.getScaledInstance(130,130, Image.SCALE_SMOOTH);
         ImageIcon myPicture = new ImageIcon(resizeImage);

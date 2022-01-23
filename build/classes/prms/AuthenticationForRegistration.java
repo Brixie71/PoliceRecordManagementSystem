@@ -125,8 +125,7 @@ public class AuthenticationForRegistration extends javax.swing.JFrame {
         backToLogin.setBackground(new java.awt.Color(60, 63, 65));
         backToLogin.setForeground(new java.awt.Color(60, 63, 65));
         backToLogin.setIcon(new javax.swing.ImageIcon(getClass().getResource("/res/icons8_back_to_32px_2.png"))); // NOI18N
-        backToLogin.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/res/icons8_back_to_32px_1.png"))); // NOI18N
-        backToLogin.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/prms/icons/icons8_back_to_32px_1.png"))); // NOI18N
+        backToLogin.setSelectedIcon(new javax.swing.ImageIcon(getClass().getResource("/res/icons8_back_to_32px_1.png"))); // NOI18N
         backToLogin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 backToLoginActionPerformed(evt);

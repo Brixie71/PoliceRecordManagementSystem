@@ -26,10 +26,17 @@ import javax.swing.table.TableRowSorter;
 import net.proteanit.sql.DbUtils;
 import static prms.Login.CarbonLoc;
 import static prms.Login.LogoLoc;
+import static prms.Login.iconLoc;
 
 public class PRMSOfficerGUI extends javax.swing.JFrame {
     public PRMSOfficerGUI() {
             initComponents();
+            
+        // TAB BUG FIX
+        P1.setVisible(true);
+        P2.setVisible(false);
+        P3.setVisible(false);
+        P4.setVisible(false);
             
             // CARBON FIBER BACKGROUND
         ImageIcon icon = new ImageIcon(getClass().getClassLoader().getResource(CarbonLoc));
@@ -1196,7 +1203,7 @@ public class PRMSOfficerGUI extends javax.swing.JFrame {
         txtCrime.setSelectedIndex(0);
         txtOrigin.setSelectedIndex(0);
         txtAddress.setText("");
-        ImageIcon imageIcon = new ImageIcon(Login.iconLoc);
+        ImageIcon imageIcon = new ImageIcon(getClass().getClassLoader().getResource(iconLoc));
         Image imagePicture = imageIcon.getImage();
 
         Image resizeImage = imagePicture.getScaledInstance(130,130, Image.SCALE_SMOOTH);
