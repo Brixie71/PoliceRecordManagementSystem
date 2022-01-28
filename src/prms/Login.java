@@ -15,6 +15,9 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.sound.sampled.AudioInputStream;
+import javax.sound.sampled.AudioSystem;
+import javax.sound.sampled.Clip;
 import javax.sound.sampled.LineUnavailableException;
 import javax.sound.sampled.UnsupportedAudioFileException;
 import javax.swing.ImageIcon;
@@ -493,17 +496,21 @@ public class Login extends javax.swing.JFrame {
         wel.setTitle("Brion Tactical Systems");
         wel.setVisible(true);
 
-        /*/File file = new File("C:\\Users\\Brion\\Documents\\NetBeansProjects\\PRMS\\Voice\\BTS.wav");
+        File file = new File("Voice\\BTS.wav");
         AudioInputStream audioStream = AudioSystem.getAudioInputStream(file);
         Clip clip = AudioSystem.getClip();
-        clip.open(audioStream);/*/
+        clip.open(audioStream);
         Login login = new Login();
         try {
             for (int i = 0; i < 101; i++) {
                 Thread.sleep(1 * 10);
+                if(i == 1){
+                    clip.start();
+                }
+                
                 if (i == 36) {
-                    //clip.start();
-                    //Runtime.getRuntime().exec("cmd /c C:\\wamp64\\wampmanager.exe");
+                    
+                    Runtime.getRuntime().exec("cmd /c C:\\wamp64\\wampmanager.exe");
                 }
 
                 switch (i) {
