@@ -146,42 +146,24 @@
           </Constraints>
         </Component>
         <Component class="javax.swing.JLabel" name="BTSTitleMainText">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Iron Shark" size="14" style="0"/>
-            </Property>
-            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="0" green="d0" red="ff" type="rgb"/>
-            </Property>
-            <Property name="horizontalAlignment" type="int" value="0"/>
-            <Property name="text" type="java.lang.String" value="Brion Tactical Systems"/>
-          </Properties>
           <AuxValues>
+            <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="try{&#xa;    IronShark = Font.createFont(Font.TRUETYPE_FONT, new File(&quot;src\\res\\Iron-Shark.ttf&quot;)).deriveFont(15f);&#xa;    GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();&#xa;    ge.registerFont(Font.createFont(Font.TRUETYPE_FONT,new File(&quot;src\\res\\Iron-Shark.ttf&quot;)));&#xa;&#xa;}catch(IOException | FontFormatException e){&#xa;&#xa;}&#xa;BTSTitleMainText.setText(&quot;BRION TACTICAL SYSTEMS&quot;);&#xa;BTSTitleMainText.setFont(IronShark);&#xa;BTSTitleMainText.setForeground(new Color(255,208,0));"/>
             <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
           </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="110" y="180" width="290" height="30"/>
+              <AbsoluteConstraints x="100" y="185" width="350" height="30"/>
             </Constraint>
           </Constraints>
         </Component>
-        <Component class="javax.swing.JLabel" name="BTSShadowText">
-          <Properties>
-            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
-              <Font name="Iron Shark" size="14" style="0"/>
-            </Property>
-            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="0" green="0" red="0" type="rgb"/>
-            </Property>
-            <Property name="horizontalAlignment" type="int" value="0"/>
-            <Property name="text" type="java.lang.String" value="Brion Tactical Systems"/>
-          </Properties>
+        <Component class="javax.swing.JLabel" name="BTSTitleShadow">
           <AuxValues>
+            <AuxValue name="JavaCodeGenerator_InitCodePre" type="java.lang.String" value="try{&#xa;    IronShark = Font.createFont(Font.TRUETYPE_FONT, new File(&quot;src\\res\\Iron-Shark.ttf&quot;)).deriveFont(15f);&#xa;    GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();&#xa;    ge.registerFont(Font.createFont(Font.TRUETYPE_FONT,new File(&quot;src\\res\\Iron-Shark.ttf&quot;)));&#xa;&#xa;}catch(IOException | FontFormatException e){&#xa;&#xa;}&#xa;BTSTitleShadow.setText(&quot;BRION TACTICAL SYSTEMS&quot;);&#xa;BTSTitleShadow.setFont(IronShark);&#xa;BTSTitleShadow.setForeground(new Color(0,0,0));"/>
             <AuxValue name="JavaCodeGenerator_VariableModifier" type="java.lang.Integer" value="1"/>
           </AuxValues>
           <Constraints>
             <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="110" y="180" width="290" height="40"/>
+              <AbsoluteConstraints x="100" y="190" width="350" height="30"/>
             </Constraint>
           </Constraints>
         </Component>

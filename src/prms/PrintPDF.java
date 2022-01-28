@@ -5,15 +5,21 @@
  */
 package prms;
 
+import java.awt.Color;
 import java.awt.Dimension;
+import java.awt.Font;
+import java.awt.FontFormatException;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
+import java.awt.GraphicsEnvironment;
 import java.awt.print.PageFormat;
 import java.awt.print.Printable;
 import java.awt.print.PrinterException;
 import java.awt.print.PrinterJob;
 import java.awt.Image;
 import java.awt.Toolkit;
+import java.io.File;
+import java.io.IOException;
 import javax.swing.JPanel;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -29,6 +35,7 @@ import javax.swing.table.DefaultTableModel;
 import javax.swing.table.TableColumn;
 import javax.swing.table.TableRowSorter;
 import net.proteanit.sql.DbUtils;
+import static prms.Login.IronShark;
 import static prms.Login.LogoLoc;
 import static prms.Login.iconLoc;
 
@@ -157,12 +164,12 @@ public class PrintPDF extends javax.swing.JFrame {
         jPanel3 = new javax.swing.JPanel();
         MinimizerBtn = new javax.swing.JButton();
         RegistrationExit = new javax.swing.JButton();
-        BTSTitleMainText = new javax.swing.JLabel();
-        BTSShadowText = new javax.swing.JLabel();
         RegistrationMainText = new javax.swing.JLabel();
         RegistrationShadowText = new javax.swing.JLabel();
         BTSLogoPrint = new javax.swing.JLabel();
         FrameDrag = new javax.swing.JLabel();
+        BTSTitleMain = new javax.swing.JLabel();
+        BTSTitleShadow = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
         crimList = new javax.swing.JTable(){
             public boolean editCellAt(int row, int column, java.util.EventObject e){
@@ -550,16 +557,6 @@ public class PrintPDF extends javax.swing.JFrame {
         });
         jPanel3.add(RegistrationExit, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 10, 30, 30));
 
-        BTSTitleMainText.setFont(new java.awt.Font("Iron Shark", 0, 14)); // NOI18N
-        BTSTitleMainText.setForeground(new java.awt.Color(255, 208, 0));
-        BTSTitleMainText.setText("Brion Tactical Systems");
-        jPanel3.add(BTSTitleMainText, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 20, 300, 30));
-
-        BTSShadowText.setFont(new java.awt.Font("Iron Shark", 0, 14)); // NOI18N
-        BTSShadowText.setForeground(new java.awt.Color(0, 0, 0));
-        BTSShadowText.setText("Brion Tactical Systems");
-        jPanel3.add(BTSShadowText, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 20, 320, 40));
-
         RegistrationMainText.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
         RegistrationMainText.setForeground(new java.awt.Color(255, 255, 255));
         RegistrationMainText.setText("PRINT POLICE RECORD");
@@ -571,7 +568,7 @@ public class PrintPDF extends javax.swing.JFrame {
         jPanel3.add(RegistrationShadowText, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 40, 270, 40));
 
         BTSLogoPrint.setText("BTSLogo");
-        jPanel3.add(BTSLogoPrint, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 10, 110, 100));
+        jPanel3.add(BTSLogoPrint, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 4, 110, 100));
 
         FrameDrag.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         FrameDrag.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
@@ -585,6 +582,32 @@ public class PrintPDF extends javax.swing.JFrame {
             }
         });
         jPanel3.add(FrameDrag, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 820, 90));
+
+        try{
+            IronShark = Font.createFont(Font.TRUETYPE_FONT, new File("src\\res\\Iron-Shark.ttf")).deriveFont(15f);
+            GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
+            ge.registerFont(Font.createFont(Font.TRUETYPE_FONT,new File("src\\res\\Iron-Shark.ttf")));
+
+        }catch(IOException | FontFormatException e){
+
+        }
+        BTSTitleMain.setText("BRION TACTICAL SYSTEMS");
+        BTSTitleMain.setFont(IronShark);
+        BTSTitleMain.setForeground(new Color(255,208,0));
+        jPanel3.add(BTSTitleMain, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 18, 370, 20));
+
+        try{
+            IronShark = Font.createFont(Font.TRUETYPE_FONT, new File("src\\res\\Iron-Shark.ttf")).deriveFont(15f);
+            GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
+            ge.registerFont(Font.createFont(Font.TRUETYPE_FONT,new File("src\\res\\Iron-Shark.ttf")));
+
+        }catch(IOException | FontFormatException e){
+
+        }
+        BTSTitleShadow.setText("BRION TACTICAL SYSTEMS");
+        BTSTitleShadow.setFont(IronShark);
+        BTSTitleShadow.setForeground(new Color(0,0,0));
+        jPanel3.add(BTSTitleShadow, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 23, 370, 20));
 
         jPanel2.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 820, 90));
 
@@ -828,8 +851,8 @@ public class PrintPDF extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextField Age;
     private javax.swing.JLabel BTSLogoPrint;
-    private javax.swing.JLabel BTSShadowText;
-    private javax.swing.JLabel BTSTitleMainText;
+    private javax.swing.JLabel BTSTitleMain;
+    private javax.swing.JLabel BTSTitleShadow;
     private javax.swing.JTextField DOA;
     private javax.swing.JTextField DOR;
     private javax.swing.JLabel FrameDrag;

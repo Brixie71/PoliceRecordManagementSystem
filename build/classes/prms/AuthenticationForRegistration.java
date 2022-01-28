@@ -1,18 +1,27 @@
 
 package prms;
 
+import java.awt.Color;
 import java.awt.Dimension;
+import java.awt.Font;
+import java.awt.FontFormatException;
+import java.awt.GraphicsEnvironment;
 import java.awt.HeadlessException;
 import java.awt.Image;
 import java.awt.Toolkit;
+import java.io.File;
+import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.ImageIcon;
 import javax.swing.JOptionPane;
 import javax.swing.SwingConstants;
+import static prms.Login.IronShark;
 import static prms.Login.LogoLoc;
 
 public class AuthenticationForRegistration extends javax.swing.JFrame {
+    
+    
     public AuthenticationForRegistration() {
         initComponents();
         Toolkit toolkit = getToolkit();
@@ -64,9 +73,9 @@ public class AuthenticationForRegistration extends javax.swing.JFrame {
         jLabel3 = new javax.swing.JLabel();
         RegistrationMainText = new javax.swing.JLabel();
         RegistrationShadowText = new javax.swing.JLabel();
-        BTSTitleMainText = new javax.swing.JLabel();
-        BTSShadowText = new javax.swing.JLabel();
         BTSLogoRegistration = new javax.swing.JLabel();
+        BTSRegTitle = new javax.swing.JLabel();
+        BTSRegShadow = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -183,18 +192,34 @@ public class AuthenticationForRegistration extends javax.swing.JFrame {
         RegistrationShadowText.setText("REGISTRATION LOCK");
         jPanel2.add(RegistrationShadowText, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 30, 270, 40));
 
-        BTSTitleMainText.setFont(new java.awt.Font("Iron Shark", 0, 14)); // NOI18N
-        BTSTitleMainText.setForeground(new java.awt.Color(255, 208, 0));
-        BTSTitleMainText.setText("Brion Tactical Systems");
-        jPanel2.add(BTSTitleMainText, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 10, 300, 30));
-
-        BTSShadowText.setFont(new java.awt.Font("Iron Shark", 0, 14)); // NOI18N
-        BTSShadowText.setForeground(new java.awt.Color(0, 0, 0));
-        BTSShadowText.setText("Brion Tactical Systems");
-        jPanel2.add(BTSShadowText, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 10, 320, 40));
-
         BTSLogoRegistration.setText("BTSLogo");
         jPanel2.add(BTSLogoRegistration, new org.netbeans.lib.awtextra.AbsoluteConstraints(80, 0, 110, 100));
+
+        try{
+            IronShark = Font.createFont(Font.TRUETYPE_FONT, new File("src\\res\\Iron-Shark.ttf")).deriveFont(12f);
+            GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
+            ge.registerFont(Font.createFont(Font.TRUETYPE_FONT,new File("src\\res\\Iron-Shark.ttf")));
+
+        }catch(IOException | FontFormatException e){
+
+        }
+        BTSRegTitle.setText("BRION TACTICAL SYSTEMS");
+        BTSRegTitle.setFont(IronShark);
+        BTSRegTitle.setForeground(new Color(255,208,0));
+        jPanel2.add(BTSRegTitle, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 10, 270, 20));
+
+        try{
+            IronShark = Font.createFont(Font.TRUETYPE_FONT, new File("src\\res\\Iron-Shark.ttf")).deriveFont(12f);
+            GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
+            ge.registerFont(Font.createFont(Font.TRUETYPE_FONT,new File("src\\res\\Iron-Shark.ttf")));
+
+        }catch(IOException | FontFormatException e){
+
+        }
+        BTSRegShadow.setText("BRION TACTICAL SYSTEMS");
+        BTSRegShadow.setFont(IronShark);
+        BTSRegShadow.setForeground(new Color(0,0,0));
+        jPanel2.add(BTSRegShadow, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 15, 270, 20));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -306,8 +331,8 @@ public class AuthenticationForRegistration extends javax.swing.JFrame {
     private javax.swing.JPasswordField AuthPassword;
     private javax.swing.JTextField AuthUsername;
     private javax.swing.JLabel BTSLogoRegistration;
-    private javax.swing.JLabel BTSShadowText;
-    private javax.swing.JLabel BTSTitleMainText;
+    private javax.swing.JLabel BTSRegShadow;
+    private javax.swing.JLabel BTSRegTitle;
     private javax.swing.JLabel FrameDrag;
     private javax.swing.JButton MinimizerBtn;
     private javax.swing.JLabel RegistrationMainText;

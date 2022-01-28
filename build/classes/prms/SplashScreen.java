@@ -1,8 +1,15 @@
 
 package prms;
 
+import java.awt.Color;
+import java.awt.Font;
+import java.awt.FontFormatException;
+import java.awt.GraphicsEnvironment;
 import java.awt.Image;
+import java.io.File;
+import java.io.IOException;
 import javax.swing.ImageIcon;
+import static prms.Login.IronShark;
 import static prms.Login.LogoLoc;
 
 public class SplashScreen extends javax.swing.JFrame {
@@ -27,7 +34,7 @@ public class SplashScreen extends javax.swing.JFrame {
         RegistrationMainText = new javax.swing.JLabel();
         RegistrationShadowText = new javax.swing.JLabel();
         BTSTitleMainText = new javax.swing.JLabel();
-        BTSShadowText = new javax.swing.JLabel();
+        BTSTitleShadow = new javax.swing.JLabel();
         Status = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -61,17 +68,31 @@ public class SplashScreen extends javax.swing.JFrame {
         RegistrationShadowText.setText("POLICE DATABASE");
         jPanel1.add(RegistrationShadowText, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 210, 270, 40));
 
-        BTSTitleMainText.setFont(new java.awt.Font("Iron Shark", 0, 14)); // NOI18N
-        BTSTitleMainText.setForeground(new java.awt.Color(255, 208, 0));
-        BTSTitleMainText.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        BTSTitleMainText.setText("Brion Tactical Systems");
-        jPanel1.add(BTSTitleMainText, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 180, 290, 30));
+        try{
+            IronShark = Font.createFont(Font.TRUETYPE_FONT, new File("src\\res\\Iron-Shark.ttf")).deriveFont(15f);
+            GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
+            ge.registerFont(Font.createFont(Font.TRUETYPE_FONT,new File("src\\res\\Iron-Shark.ttf")));
 
-        BTSShadowText.setFont(new java.awt.Font("Iron Shark", 0, 14)); // NOI18N
-        BTSShadowText.setForeground(new java.awt.Color(0, 0, 0));
-        BTSShadowText.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        BTSShadowText.setText("Brion Tactical Systems");
-        jPanel1.add(BTSShadowText, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 180, 290, 40));
+        }catch(IOException | FontFormatException e){
+
+        }
+        BTSTitleMainText.setText("BRION TACTICAL SYSTEMS");
+        BTSTitleMainText.setFont(IronShark);
+        BTSTitleMainText.setForeground(new Color(255,208,0));
+        jPanel1.add(BTSTitleMainText, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 185, 350, 30));
+
+        try{
+            IronShark = Font.createFont(Font.TRUETYPE_FONT, new File("src\\res\\Iron-Shark.ttf")).deriveFont(15f);
+            GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
+            ge.registerFont(Font.createFont(Font.TRUETYPE_FONT,new File("src\\res\\Iron-Shark.ttf")));
+
+        }catch(IOException | FontFormatException e){
+
+        }
+        BTSTitleShadow.setText("BRION TACTICAL SYSTEMS");
+        BTSTitleShadow.setFont(IronShark);
+        BTSTitleShadow.setForeground(new Color(0,0,0));
+        jPanel1.add(BTSTitleShadow, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 190, 350, 30));
 
         Status.setFont(new java.awt.Font("Lucida Console", 0, 14)); // NOI18N
         Status.setForeground(new java.awt.Color(255, 255, 255));
@@ -97,8 +118,8 @@ public class SplashScreen extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     public javax.swing.JLabel BTSLogo;
-    public javax.swing.JLabel BTSShadowText;
     public javax.swing.JLabel BTSTitleMainText;
+    public javax.swing.JLabel BTSTitleShadow;
     public javax.swing.JProgressBar Loading;
     public javax.swing.JLabel RegistrationMainText;
     public javax.swing.JLabel RegistrationShadowText;

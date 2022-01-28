@@ -1,8 +1,13 @@
 package prms;
 
+import java.awt.Color;
 import java.awt.Dimension;
+import java.awt.Font;
+import java.awt.FontFormatException;
+import java.awt.GraphicsEnvironment;
 import java.awt.Image;
 import java.awt.Toolkit;
+import java.io.File;
 import java.io.IOException;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -21,10 +26,13 @@ public class Login extends javax.swing.JFrame {
     static String LogoLoc = "res/Brion Technological Systems3.png";
     static String CarbonLoc = "res/CVO9Y72-black-carbon-wallpaper.jpg";
     static String iconLoc = "res/icons8_user_130px_1.png";
+    static Font IronShark;
+    
 
     public Login() {
         initComponents();
-
+        
+        BTSTitleMainText.setFont(IronShark);
         // CENTER POPUP WINDOW
         Toolkit toolkit = getToolkit();
         Dimension size = toolkit.getScreenSize();
@@ -81,9 +89,9 @@ public class Login extends javax.swing.JFrame {
         carbonFibrBackground = new javax.swing.JLabel();
         MinimizerBtn = new javax.swing.JButton();
         LoginExit = new javax.swing.JButton();
-        BTSBillboardLogo = new javax.swing.JLabel();
         BTSTitleMainText = new javax.swing.JLabel();
-        BTSTitleShadowText = new javax.swing.JLabel();
+        BTSTitleMainShadow = new javax.swing.JLabel();
+        BTSBillboardLogo = new javax.swing.JLabel();
         FrameDrag = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -261,25 +269,41 @@ public class Login extends javax.swing.JFrame {
         });
         LoginPanel.add(LoginExit, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 10, 30, 30));
 
+        try{
+            IronShark = Font.createFont(Font.TRUETYPE_FONT, new File("src\\res\\Iron-Shark.ttf")).deriveFont(18f);
+            GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
+            ge.registerFont(Font.createFont(Font.TRUETYPE_FONT,new File("src\\res\\Iron-Shark.ttf")));
+
+        }catch(IOException | FontFormatException e){
+
+        }
+        BTSTitleMainText.setText("BRION TACTICAL SYSTEMS");
+        BTSTitleMainText.setFont(IronShark);
+        BTSTitleMainText.setForeground(new Color(255,208,0));
+        BTSTitleMainText.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        BTSTitleMainText.setToolTipText("");
+        BTSTitleMainText.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        LoginPanel.add(BTSTitleMainText, new org.netbeans.lib.awtextra.AbsoluteConstraints(405, 315, 380, 30));
+
+        try{
+            IronShark = Font.createFont(Font.TRUETYPE_FONT, new File("src\\res\\Iron-Shark.ttf")).deriveFont(18f);
+            GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
+            ge.registerFont(Font.createFont(Font.TRUETYPE_FONT,new File("src\\res\\Iron-Shark.ttf")));
+
+        }catch(IOException | FontFormatException e){
+
+        }
+        BTSTitleMainShadow.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        BTSTitleMainShadow.setToolTipText("");
+        BTSTitleMainShadow.setText("BRION TACTICAL SYSTEMS");
+        BTSTitleMainShadow.setFont(IronShark);
+        BTSTitleMainShadow.setForeground(new Color(0,0,0));
+        BTSTitleMainShadow.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        LoginPanel.add(BTSTitleMainShadow, new org.netbeans.lib.awtextra.AbsoluteConstraints(405, 320, 380, 30));
+
         BTSBillboardLogo.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         BTSBillboardLogo.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         LoginPanel.add(BTSBillboardLogo, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 40, 370, 370));
-
-        BTSTitleMainText.setFont(new java.awt.Font("Iron Shark", 0, 18)); // NOI18N
-        BTSTitleMainText.setForeground(new java.awt.Color(255, 208, 0));
-        BTSTitleMainText.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        BTSTitleMainText.setText("BRION TACTICAL SYSTEMS");
-        BTSTitleMainText.setToolTipText("");
-        BTSTitleMainText.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        LoginPanel.add(BTSTitleMainText, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 320, 380, 20));
-
-        BTSTitleShadowText.setFont(new java.awt.Font("Iron Shark", 0, 18)); // NOI18N
-        BTSTitleShadowText.setForeground(new java.awt.Color(0, 0, 0));
-        BTSTitleShadowText.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        BTSTitleShadowText.setText("BRION TACTICAL SYSTEMS");
-        BTSTitleShadowText.setToolTipText("");
-        BTSTitleShadowText.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
-        LoginPanel.add(BTSTitleShadowText, new org.netbeans.lib.awtextra.AbsoluteConstraints(410, 320, 380, 30));
 
         FrameDrag.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         FrameDrag.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
@@ -479,7 +503,7 @@ public class Login extends javax.swing.JFrame {
                 Thread.sleep(1 * 10);
                 if (i == 36) {
                     //clip.start();
-                    Runtime.getRuntime().exec("cmd /c C:\\wamp64\\wampmanager.exe");
+                    //Runtime.getRuntime().exec("cmd /c C:\\wamp64\\wampmanager.exe");
                 }
 
                 switch (i) {
@@ -522,8 +546,8 @@ public class Login extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel BTSBillboardLogo;
+    private javax.swing.JLabel BTSTitleMainShadow;
     private javax.swing.JLabel BTSTitleMainText;
-    private javax.swing.JLabel BTSTitleShadowText;
     private javax.swing.JLabel FrameDrag;
     private javax.swing.JButton LoginButton;
     private javax.swing.JButton LoginExit;

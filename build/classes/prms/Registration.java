@@ -1,12 +1,17 @@
 
 package prms;
 
+import java.awt.Color;
 import java.awt.Dimension;
+import java.awt.Font;
+import java.awt.FontFormatException;
+import java.awt.GraphicsEnvironment;
 import java.awt.Image;
 import java.awt.Toolkit;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.io.InputStream;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -18,6 +23,7 @@ import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
 import javax.swing.SwingConstants;
 import javax.swing.filechooser.FileNameExtensionFilter;
+import static prms.Login.IronShark;
 import static prms.Login.LogoLoc;
 import static prms.Login.iconLoc;
 
@@ -336,14 +342,31 @@ public class Registration extends javax.swing.JFrame {
         jPanel2.add(RegistrationExit, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 10, 30, 30));
 
         BTSTitleMainText.setFont(new java.awt.Font("Iron Shark", 0, 14)); // NOI18N
-        BTSTitleMainText.setForeground(new java.awt.Color(255, 208, 0));
-        BTSTitleMainText.setText("Brion Tactical Systems");
-        jPanel2.add(BTSTitleMainText, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 20, 300, 30));
+        try{
+            IronShark = Font.createFont(Font.TRUETYPE_FONT, new File("src\\res\\Iron-Shark.ttf")).deriveFont(15f);
+            GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
+            ge.registerFont(Font.createFont(Font.TRUETYPE_FONT,new File("src\\res\\Iron-Shark.ttf")));
 
-        BTSShadowText.setFont(new java.awt.Font("Iron Shark", 0, 14)); // NOI18N
-        BTSShadowText.setForeground(new java.awt.Color(0, 0, 0));
-        BTSShadowText.setText("Brion Tactical Systems");
-        jPanel2.add(BTSShadowText, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 20, 320, 40));
+        }catch(IOException | FontFormatException e){
+
+        }
+        BTSTitleMainText.setText("BRION TACTICAL SYSTEMS");
+        BTSTitleMainText.setFont(IronShark);
+        BTSTitleMainText.setForeground(new Color(255,208,0));
+        jPanel2.add(BTSTitleMainText, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 15, 330, 30));
+
+        try{
+            IronShark = Font.createFont(Font.TRUETYPE_FONT, new File("src\\res\\Iron-Shark.ttf")).deriveFont(15f);
+            GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
+            ge.registerFont(Font.createFont(Font.TRUETYPE_FONT,new File("src\\res\\Iron-Shark.ttf")));
+
+        }catch(IOException | FontFormatException e){
+
+        }
+        BTSShadowText.setText("BRION TACTICAL SYSTEMS");
+        BTSShadowText.setFont(IronShark);
+        BTSShadowText.setForeground(new Color(0,0,0));
+        jPanel2.add(BTSShadowText, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 20, 330, 30));
 
         RegistrationMainText.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
         RegistrationMainText.setForeground(new java.awt.Color(255, 255, 255));
