@@ -79,7 +79,7 @@ public class SplashScreen extends javax.swing.JFrame {
         BTSTitleMainText.setText("BRION TACTICAL SYSTEMS");
         BTSTitleMainText.setFont(IronShark);
         BTSTitleMainText.setForeground(new Color(255,208,0));
-        jPanel1.add(BTSTitleMainText, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 185, 350, 30));
+        jPanel1.add(BTSTitleMainText, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 185, 350, 30));
 
         try{
             IronShark = Font.createFont(Font.TRUETYPE_FONT, new File("src\\res\\Iron-Shark.ttf")).deriveFont(15f);
@@ -92,7 +92,7 @@ public class SplashScreen extends javax.swing.JFrame {
         BTSTitleShadow.setText("BRION TACTICAL SYSTEMS");
         BTSTitleShadow.setFont(IronShark);
         BTSTitleShadow.setForeground(new Color(0,0,0));
-        jPanel1.add(BTSTitleShadow, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 190, 350, 30));
+        jPanel1.add(BTSTitleShadow, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 190, 350, 30));
 
         Status.setFont(new java.awt.Font("Lucida Console", 0, 14)); // NOI18N
         Status.setForeground(new java.awt.Color(255, 255, 255));

@@ -136,11 +136,6 @@ public class Login extends javax.swing.JFrame {
         LoginPassword.setToolTipText("Enter your Password");
         LoginPassword.setBorder(javax.swing.BorderFactory.createEmptyBorder(1, 6, 1, 6));
         LoginPassword.setSelectionColor(new java.awt.Color(255, 208, 0));
-        LoginPassword.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                LoginPasswordActionPerformed(evt);
-            }
-        });
         LoginPanel.add(LoginPassword, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 320, 160, 35));
 
         viewPicture.setBackground(new java.awt.Color(255, 255, 255));
@@ -335,11 +330,6 @@ public class Login extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    // LOGIN PASSWORD ENTRY ( JPasswordField )
-    private void LoginPasswordActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoginPasswordActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_LoginPasswordActionPerformed
-
     // LOGIN BUTTON ( JButton )
     private void LoginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LoginButtonActionPerformed
         // TODO add your handling code here:
@@ -413,8 +403,9 @@ public class Login extends javax.swing.JFrame {
             }
         } else {
             System.out.println("Police Database connection Unavailable! Check your JDBC Connector");
-            JOptionPane.showMessageDialog(this, "Police database connection unavailable!\r\n"
-                    + "Please Check your JDBC Connector!", "POLICE DATABASE", JOptionPane.INFORMATION_MESSAGE);
+            JOptionPane.showMessageDialog(this, """
+                                                Police database connection unavailable!\r
+                                                Please Check your JDBC Connector!""", "POLICE DATABASE", JOptionPane.INFORMATION_MESSAGE);
         }
 
     }//GEN-LAST:event_LoginUsernameActionPerformed
@@ -423,9 +414,10 @@ public class Login extends javax.swing.JFrame {
     private void RegistrationActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegistrationActionPerformed
         // TODO add your handling code here:
         dispose();
-        JOptionPane.showMessageDialog(this, "Only the BTS development team can access this for signing police personel.\r\n"
-                + "Please contact your database supervisor and the BTS development team for adding additional\r\n"
-                + "police personel accounts.", "PRMS DATABASE", JOptionPane.INFORMATION_MESSAGE);
+        JOptionPane.showMessageDialog(this, """
+                                            Only the BTS development team can access this for signing police personel.\r
+                                            Please contact your database supervisor and the BTS development team for adding additional\r
+                                            police personel accounts.""", "PRMS DATABASE", JOptionPane.INFORMATION_MESSAGE);
         AuthenticationForRegistration rUser = new AuthenticationForRegistration();
         rUser.setTitle("Brion Tactical Systems : PRMS DATABASE (Authentication)");
         rUser.setLocationRelativeTo(null);
@@ -663,16 +655,18 @@ public class Login extends javax.swing.JFrame {
                 } else {
                     System.out.println("username " + username);
                     System.out.println("password " + password);
-                    JOptionPane.showMessageDialog(this, "The Username and Password you have entered\r\n"
-                            + "did not match any of our records in the database.", "PRMS DATABASE", JOptionPane.INFORMATION_MESSAGE);
+                    JOptionPane.showMessageDialog(this, """
+                                                        The Username and Password you have entered\r
+                                                        did not match any of our records in the database.""", "PRMS DATABASE", JOptionPane.INFORMATION_MESSAGE);
                 }
             } catch (SQLException ex) {
                 Logger.getLogger(Login.class.getName()).log(Level.SEVERE, null, ex);
             }
         } else {
             System.out.println("Police Database connection Unavailable! Check your JDBC Connector");
-            JOptionPane.showMessageDialog(this, "Police database connection unavailable!\r\n"
-                    + "Please Check your JDBC Connector!", "POLICE DATABASE", JOptionPane.INFORMATION_MESSAGE);
+            JOptionPane.showMessageDialog(this, """
+                                                Police database connection unavailable!\r
+                                                Please Check your JDBC Connector!""", "POLICE DATABASE", JOptionPane.INFORMATION_MESSAGE);
         }
     }
 

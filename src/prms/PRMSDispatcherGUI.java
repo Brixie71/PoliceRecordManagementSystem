@@ -2,10 +2,14 @@
 package prms;
 
 import java.awt.Color;
+import java.awt.Font;
+import java.awt.FontFormatException;
+import java.awt.GraphicsEnvironment;
 import java.awt.Image;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
+import java.io.IOException;
 import java.io.InputStream;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
@@ -25,6 +29,7 @@ import javax.swing.table.TableColumn;
 import javax.swing.table.TableRowSorter;
 import net.proteanit.sql.DbUtils;
 import static prms.Login.CarbonLoc;
+import static prms.Login.IronShark;
 import static prms.Login.LogoLoc;
 import static prms.Login.iconLoc;
 
@@ -314,8 +319,6 @@ public class PRMSDispatcherGUI extends javax.swing.JFrame {
         Line3 = new javax.swing.JPanel();
         Bar = new javax.swing.JPanel();
         MinimizerBtn = new javax.swing.JButton();
-        BTSTitleMainText = new javax.swing.JLabel();
-        BTSShadowText = new javax.swing.JLabel();
         RegistrationMainText = new javax.swing.JLabel();
         RegistrationShadowText = new javax.swing.JLabel();
         LogOut = new javax.swing.JButton();
@@ -323,6 +326,8 @@ public class PRMSDispatcherGUI extends javax.swing.JFrame {
         BTSLogoAdmin = new javax.swing.JLabel();
         userAccIdentificaion = new javax.swing.JLabel();
         userAccIdentificaionShdw = new javax.swing.JLabel();
+        BTSTitleMainText = new javax.swing.JLabel();
+        BTSTitleMainShadow = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBounds(new java.awt.Rectangle(800, 600, 600, 600));
@@ -1166,16 +1171,6 @@ public class PRMSDispatcherGUI extends javax.swing.JFrame {
         });
         Bar.add(MinimizerBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(880, 10, 30, 30));
 
-        BTSTitleMainText.setFont(new java.awt.Font("Iron Shark", 0, 14)); // NOI18N
-        BTSTitleMainText.setForeground(new java.awt.Color(255, 208, 0));
-        BTSTitleMainText.setText("Brion Tactical Systems");
-        Bar.add(BTSTitleMainText, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 20, 300, 30));
-
-        BTSShadowText.setFont(new java.awt.Font("Iron Shark", 0, 14)); // NOI18N
-        BTSShadowText.setForeground(new java.awt.Color(0, 0, 0));
-        BTSShadowText.setText("Brion Tactical Systems");
-        Bar.add(BTSShadowText, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 20, 320, 40));
-
         RegistrationMainText.setFont(new java.awt.Font("Impact", 0, 24)); // NOI18N
         RegistrationMainText.setForeground(new java.awt.Color(255, 255, 255));
         RegistrationMainText.setText("POLICE DATABASE");
@@ -1226,6 +1221,38 @@ public class PRMSDispatcherGUI extends javax.swing.JFrame {
         userAccIdentificaionShdw.setForeground(new java.awt.Color(0, 0, 0));
         userAccIdentificaionShdw.setText("DISPATCHER");
         Bar.add(userAccIdentificaionShdw, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 20, -1, 60));
+
+        try{
+            IronShark = Font.createFont(Font.TRUETYPE_FONT, new File("src\\res\\Iron-Shark.ttf")).deriveFont(18f);
+            GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
+            ge.registerFont(Font.createFont(Font.TRUETYPE_FONT,new File("src\\res\\Iron-Shark.ttf")));
+
+        }catch(IOException | FontFormatException e){
+
+        }
+        BTSTitleMainText.setText("BRION TACTICAL SYSTEMS");
+        BTSTitleMainText.setFont(IronShark);
+        BTSTitleMainText.setForeground(new Color(255,208,0));
+        BTSTitleMainText.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        BTSTitleMainText.setToolTipText("");
+        BTSTitleMainText.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        Bar.add(BTSTitleMainText, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 15, 380, 30));
+
+        try{
+            IronShark = Font.createFont(Font.TRUETYPE_FONT, new File("src\\res\\Iron-Shark.ttf")).deriveFont(18f);
+            GraphicsEnvironment ge = GraphicsEnvironment.getLocalGraphicsEnvironment();
+            ge.registerFont(Font.createFont(Font.TRUETYPE_FONT,new File("src\\res\\Iron-Shark.ttf")));
+
+        }catch(IOException | FontFormatException e){
+
+        }
+        BTSTitleMainShadow.setText("BRION TACTICAL SYSTEMS");
+        BTSTitleMainShadow.setFont(IronShark);
+        BTSTitleMainShadow.setForeground(new Color(0,0,0));
+        BTSTitleMainShadow.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        BTSTitleMainShadow.setToolTipText("");
+        BTSTitleMainShadow.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        Bar.add(BTSTitleMainShadow, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 20, 380, 30));
 
         getContentPane().add(Bar, java.awt.BorderLayout.PAGE_START);
 
@@ -1602,17 +1629,12 @@ public class PRMSDispatcherGUI extends javax.swing.JFrame {
             java.util.logging.Logger.getLogger(PRMSDispatcherGUI.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
 
-            java.awt.EventQueue.invokeLater(new Runnable() {
-            
-            @Override
-            public void run() {
+            java.awt.EventQueue.invokeLater(() -> {
                 try {
                     new PRMSDispatcherGUI().setVisible(true);
                 } catch (SQLException ex) {
                     Logger.getLogger(PRMSDispatcherGUI.class.getName()).log(Level.SEVERE, null, ex);
                 }
-                
-            }
         });
         }
         
@@ -1634,8 +1656,8 @@ public class PRMSDispatcherGUI extends javax.swing.JFrame {
     private javax.swing.JLabel BTSDevTeam7;
     private javax.swing.JLabel BTSDevTeam8;
     private javax.swing.JLabel BTSLogoAdmin;
-    private javax.swing.JLabel BTSShadowText;
     public javax.swing.JLabel BTSShadowText1;
+    private javax.swing.JLabel BTSTitleMainShadow;
     private javax.swing.JLabel BTSTitleMainText;
     public javax.swing.JLabel BTSTitleMainText1;
     private javax.swing.JPanel Bar;
