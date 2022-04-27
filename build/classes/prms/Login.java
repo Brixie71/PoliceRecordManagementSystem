@@ -30,12 +30,12 @@ public class Login extends javax.swing.JFrame {
     static String CarbonLoc = "res/CVO9Y72-black-carbon-wallpaper.jpg";
     static String iconLoc = "res/icons8_user_130px_1.png";
     static Font IronShark;
-    
 
     public Login() {
         initComponents();
-        
+
         BTSTitleMainText.setFont(IronShark);
+
         // CENTER POPUP WINDOW
         Toolkit toolkit = getToolkit();
         Dimension size = toolkit.getScreenSize();
@@ -472,7 +472,7 @@ public class Login extends javax.swing.JFrame {
          */
         try {
             for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Windows".equals(info.getName())) {
+                if ("Nimbus".equals(info.getName())) {
                     javax.swing.UIManager.setLookAndFeel(info.getClassName());
                     break;
                 }
@@ -488,7 +488,7 @@ public class Login extends javax.swing.JFrame {
         wel.setTitle("Brion Tactical Systems");
         wel.setVisible(true);
 
-        File file = new File("Voice\\BTS.wav");
+        File file = new File("src\\res\\BTSVocalRecConv.wav");
         AudioInputStream audioStream = AudioSystem.getAudioInputStream(file);
         Clip clip = AudioSystem.getClip();
         clip.open(audioStream);
@@ -496,12 +496,12 @@ public class Login extends javax.swing.JFrame {
         try {
             for (int i = 0; i < 101; i++) {
                 Thread.sleep(1 * 10);
-                if(i == 1){
+                if (i == 1) {
                     clip.start();
                 }
-                
+
                 if (i == 36) {
-                    
+
                     Runtime.getRuntime().exec("cmd /c C:\\wamp64\\wampmanager.exe");
                 }
 

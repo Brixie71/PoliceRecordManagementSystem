@@ -488,7 +488,7 @@ public class Login extends javax.swing.JFrame {
         wel.setTitle("Brion Tactical Systems");
         wel.setVisible(true);
 
-        File file = new File("Voice\\BTS.wav");
+        File file = new File("src\\res\\BTSVocalRecConv.wav");
         AudioInputStream audioStream = AudioSystem.getAudioInputStream(file);
         Clip clip = AudioSystem.getClip();
         clip.open(audioStream);
