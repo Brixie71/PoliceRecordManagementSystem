@@ -1,4 +1,4 @@
-# PoliceRecordManagementSystem
+# Police Record Management System
 This Project was made during my freshmen year. A Police Record Management System using Purely Java Programming Language. This Project is made as a requirement for the a Course Subject during our 2nd Semester Term.
 
 The Graphical User Interface (GUI) was made by using Java Swing and Java Swing Builder using Netbeans IDE.
