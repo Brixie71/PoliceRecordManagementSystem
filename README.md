@@ -5,7 +5,7 @@ The Graphical User Interface (GUI) was made by using Java Swing and Java Swing B
 Java Database Connector (JDBC) or Connector/J API was the Backend used to communicated between PHPMySQL run by XAMPP and the Java Swing Application to do Create, Read, Update, and Delete (CRUD) Operations.
 
 # Role 
-I was the Lead Developer of the System. Along with a Assistant Developer, a Debugger and Tester in our Group. This is the Very First System we made during our Freshment year.
+We were composed of Three(3) People. I was the Lead Developer of the System. Along with a Assistant Developer, a Debugger and Tester in our Group. This is the Very First System we made during our Freshment year.
 I made the UI from scratch by Incremental Development. The System Is then Improved during our 2nd Year Term titled "PRMSRemastered"
 
 - Link for PRMS Remastered 
