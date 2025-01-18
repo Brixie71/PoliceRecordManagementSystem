@@ -10,3 +10,4 @@ Java Database Connector (JDBC) or Connector/J API was the Backend used to commun
 - Database Connection
 - Graphical User Interface (GUI) Building (Front-End)
 - Creating a MySQL Database using PHPMySQL
+- Adding Event Listeners such as Mouse and Keyboard Functions to the Software
